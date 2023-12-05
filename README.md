@@ -14,8 +14,7 @@
 
 * [Tistory - 김윤웅](https://yunwoong.tistory.com/212)
 > 디스코드 봇 초기 세팅을 할 때 참고했습니다.
-
-
+  
 * [Tistory - Nerdy](https://whiplash-bd.tistory.com/42)
 > Riot API 명세서에 대한 설명을 참고했습니다.
 
