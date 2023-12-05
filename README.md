@@ -93,36 +93,35 @@
 <br>
 
 * P.S 봇이 채널에 입장했을 때
-![img.png](img.png)
-</br>
+
+<img src="https://i.ibb.co/f2DLdtc/image.png" width="400" height="400"/>
+
+<br>
 
 <br>
 
 * 사람이 채널에 입장했을 때
 
-</br>
 
 <br>
 
 * !메타정보 `!메타정보`
 > 현재 챔피언들의 티어리스트를 정리한 `프로관전러 P.S` Youtube 영상을 바로 찾아볼 수 있게 도와줍니다.
 
-</br>
-
 <br>
 
 * !전적검색 닉네임#태그 `!전적검색 민규#TAG`
 > 해당 유저의 정보를 확인해볼 수 있습니다.
-![img_1.png](img_1.png)
 
-</br>
+<img src="https://i.ibb.co/sgYDpnt/img-1.png" width="400" height="400"/>
 
 <br>
 
 * !인게임분석 닉네임#태그 `!인게임분석 민규#TAG`
 > 해당 게임에서 누구와 게임을 풀어나가야 할지, 적팀에서 누구를 조심해야 할지를 승률에 기반해서 알려줍니다.
 
-</br>
+<img src="https://i.ibb.co/N7mf3Wk/image.png" width="400" height="400"/>
+
 
 ▶ P.S 봇 사용법 - 개발자
 -
@@ -136,18 +135,19 @@
 
 5) 좌측 Bot 탭 > [Add Bot]을 클릭 > 아래처럼 Intents 관련 설정을 모두 ON으로 바꿔줍니다. (무조건)
 
-![image](https://github.com/uykm/P.Sbot-Discord/assets/98581610/3d846094-2cd4-46ae-ac1b-9a967d91668b)
+<img src="https://github.com/uykm/P.Sbot-Discord/assets/98581610/3d846094-2cd4-46ae-ac1b-9a967d91668b" width="500" height="300"/>
 
 6) 좌측 OAuth2 탭 > URL Generater > SCOPES - bot 체크 > BOT PERMiSSIONS - Administrator 체크 > 맨 아래 생성된 URL로 접속하여 원하는 서버에 봇을 초대해줍니다.
 
-![image](https://github.com/uykm/P.Sbot-Discord/assets/98581610/e81c1198-09a7-419c-afb3-b411bad9f915)
+<img src="https://github.com/uykm/P.Sbot-Discord/assets/98581610/e81c1198-09a7-419c-afb3-b411bad9f915" width="500" height="300"/>
 
 7) 좌측 Bot 탭 > Token을 copy(reset을 해줘야 하는 경우엔 reset) > 로컬 리포지터리 내에 텍스트 파일(Discord_token)을 생성해 '붙여넣기' 합니다.
 
 8) Riot API key 발급: [DEVELOPMENT API KEY 발급](https://developer.riotgames.com/) 혹은 만료 기간을 길게 하고 싶다면 [PERSONAL API KEY 발급](https://developer.riotgames.com/app-type)받은 후에, 디스코드 토큰을 텍스트 파일에 복사 붙여넣기 해준 것처럼 텍스트 파일(Riot_api_key)에 '붙여넣기' 해줍니다.
 
 9) Youtube API key 발급: [Google Cloud Platform](https://console.cloud.google.com/apis/dashboard?project=ps-botproject) 접속 > 새 프로젝트 생성 > 좌측 '라이브러리' 탭에서 'Youtube Data API v3' 클릭 > 사용자 인증 정보 만들기(아래처럼) > API 키를 copy 하여 텍스트 파일(Youtube_api_key)에 '붙여넣기' 해줍니다.
-![img_2.png](img_2.png)
+
+<img src="https://i.ibb.co/MhszPTG/img-2.png" width="500" height="300"/>
 
 10) 다시 개발 환경으로 돌아와 'main.py'를 실행! (끝)
 
