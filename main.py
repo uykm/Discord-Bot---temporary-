@@ -6,12 +6,14 @@ import time as t
 
 from commandInfo import commandInfo
 from coach import get_summoner_id, get_puuid, get_current_game_info, get_strategy
+from meta import get_latest_meta
 from searchSummoner import search
 
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-TOKEN = open("Discord_token.txt", "r").readline()
+TOKEN = open("Discord_token", "r").readline()
+Youtube_api_key = open("Youtube_api_key", "r").readline()
 
 # intents 설정은 꼭 해줘야 한다!
 intents = discord.Intents.default()
@@ -55,7 +57,27 @@ async def on_message(msg):
         return None
 
     if msg.content == ('!명령어'):
+        await msg.delete()
         await msg.channel.send(embed=commandInfo())
+
+    if msg.content == ('!메타정보'):
+        embed = await get_latest_meta()
+        if embed:
+            t1 = t.time()
+            await msg.channel.send(embed=embed)
+            temp_message = await msg.channel.send("잠시만 기다려주세요!")  # 임시 메시지 저장
+            await msg.delete()
+            await temp_message.delete()  # 임시 메시지 삭제
+            t2 = t.time()
+            embed = discord.Embed(title="데이터 출처", description="[Youtube] 프로관전러 P.S", color=0x62c1cc)
+            embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
+            embed.set_footer(text="프로관전러 P.S 유튜브 자료를 가져왔습니다..",
+                             icon_url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
+            await msg.channel.send(embed=embed)
+        else:
+            await msg.delete()
+            await msg.channel.send("죄송합니다. 아직 현재 메타 정보가 준비되지 않았습니다.")
+
 
     if msg.content.startswith('!전적검색'):
         parts = msg.content.split('#', 1)
@@ -82,7 +104,7 @@ async def on_message(msg):
                 await msg.channel.send(file=file)
                 await temp_message.delete()  # 임시 메시지 삭제
                 t2 = t.time()
-                embed = discord.Embed(title="데이터 출처", description="lol.ps / fow.kr", color=0x62c1cc)
+                embed = discord.Embed(title="데이터 출처", description="Riot API / fow.kr", color=0x62c1cc)
                 embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
                 embed.set_footer(text="솔로랭크 기준 티어입니다. | 랭크 정보가 없을 시 출력되지 않습니다.", icon_url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
             await msg.channel.send(embed=embed)

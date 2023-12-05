@@ -7,7 +7,7 @@ import discord
 # 응답 속도를 높이기 위해 비동기 방식으로 변경했습니다.
 from championDB import find_kor_name
 
-api_key = open("Riot_api_key.txt", "r").readline()
+api_key = open("Riot_api_key", "r").readline()
 
 champion_data_cache = None
 
@@ -157,15 +157,15 @@ async def get_strategy(session, input_name, input_tag, puuid, current_game):
         our_team_message = f"우리 팀의 스타 플레이어는 \" 당신 \" 입니다. \n희생적인 플레이는 피하고 성장에 집중하세요!"
     else:
         our_team_message = (f"우리 팀의 스타 플레이어는 \" {our_kor_ace} \" 입니다. \n\" {our_kor_ace} \" 와(과) 함께 게임을 풀어나가는 것을 추천합니다!\n"
-                            f"[{our_kor_ace} 정보] ")
+                            f"`{our_kor_ace} 정보:` ")
     embed.set_thumbnail(url=our_ace_image)
     embed.add_field(name="추천 코멘트 !", value=our_team_message + "`" + str(our_ace_name_and_tag) + "`", inline=False)
 
     # 적 팀 챔피언 이미지와 메시지 추가
     enemy_ace_image = await get_champion_image(session, enemy_ace_champion_eng)
     embed.set_image(url=enemy_ace_image)
-    enemy_team_message = (f"적 팀에 있는 \"" + enemy_kor_ace + "\" 은(는) 조심할 필요가 있을 것 같아요!\n"
-                        f"[{enemy_kor_ace} 정보] ")
+    enemy_team_message = (f"적 팀에 있는 \"" + enemy_kor_ace + "\" 은(는) 조심할 필요가 있을 것 같습니다!\n"
+                        f"`{enemy_kor_ace} 정보:` ")
     embed.add_field(name="주의 코멘트 !", value=enemy_team_message + "`" + str(enemy_ace_name_and_tag) + "`", inline=False)
 
     return embed
