@@ -98,8 +98,6 @@
 
 <br>
 
-<br>
-
 * 사람이 채널에 입장했을 때
 
 
@@ -122,6 +120,7 @@
 
 <img src="https://i.ibb.co/N7mf3Wk/image.png" width="400" height="400"/>
 
+<br>
 
 ▶ P.S 봇 사용법 - 개발자
 -
