@@ -11,7 +11,7 @@ from searchSummoner import search
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-TOKEN = open("C:/Users/who/Desktop/SeoulTech/2023_2/OSS/Discord_token.txt", "r").readline()
+TOKEN = open("Discord_token.txt", "r").readline()
 
 # intents 설정은 꼭 해줘야 한다!
 intents = discord.Intents.default()
