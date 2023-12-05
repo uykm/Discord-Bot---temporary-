@@ -63,10 +63,12 @@ P.S 봇 사용법 (개발자)
 
 4) [디스코드 개발자 포털](https://discord.com/developers/applications)로 접속한 후, 우측 상단 [New Application]을 클릭합니다.
 
-5) 좌측 Bot 탭으로 이동한 하여 [Add Bot]을 클릭한 다음, 아래처럼 Intents 관련 설정을 모두 ON으로 바꿔줍니다. (무조건)
+5) 좌측 Bot 탭 > [Add Bot]을 클릭 > 아래처럼 Intents 관련 설정을 모두 ON으로 바꿔줍니다. (무조건)
 ![image](https://github.com/uykm/P.Sbot-Discord/assets/98581610/3d846094-2cd4-46ae-ac1b-9a967d91668b)
 
-6) OAuth2 탭 -> URL Generater 에서 Scopes - bot 체크, Bot Permissions - Administrator 를 체크 해주면 URL이 생성됩니다.
+6) 좌측 OAuth2 탭 > URL Generater > SCOPES - bot 체크 > BOT PERMiSSIONS - Administrator 체크 > 맨 아래 생성된 URL로 접속하여 원하는 서버에 
+
+![image](https://github.com/uykm/P.Sbot-Discord/assets/98581610/e81c1198-09a7-419c-afb3-b411bad9f915)
 
 7) 이 URL은 봇을 서버에 초대할 때 사용됩니다. URL로 접속하여 서버에 봇을 초대해 줍니다.
 
