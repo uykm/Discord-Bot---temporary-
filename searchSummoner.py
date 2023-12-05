@@ -7,7 +7,7 @@ from PIL import Image
 
 from championDB import championsName
 
-api_key = "RGAPI-ba3d4576-cd54-481b-911a-b2ed2122faca"
+api_key = open("C:/Users/who/Desktop/SeoulTech/2023_2/OSS/Riot_api_key.txt", "r").readline()
 
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:
