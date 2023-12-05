@@ -1,4 +1,4 @@
-리그오브레전드 P.S Bot <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="40px" height="40px" title="px(픽셀) 크기 설정" alt="P.S"></img>
+리그오브레전드 P.S Bot <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="30px" height="30px" title="px(픽셀) 크기 설정" alt="P.S"></img>
 =
 프로젝트 참여자
 -
