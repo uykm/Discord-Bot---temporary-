@@ -2,28 +2,28 @@
 =
 카테고리
 -
-#### ▶ [프로젝트 참여자](https://github.com/uykm/P.Sbot-Discord#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B0%B8%EC%97%AC%EC%9E%90)
+#### ▶ [프로젝트 참여자](https://github.com/uykm/P.Sbot-Discord#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B0%B8%EC%97%AC%EC%9E%90-1)
 
-#### ▶ [프로젝트 동기 & 설명](https://github.com/uykm/P.Sbot-Discord#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%8F%99%EA%B8%B0--%EC%84%A4%EB%AA%85)
+#### ▶ [프로젝트 동기 & 설명](https://github.com/uykm/P.Sbot-Discord#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%8F%99%EA%B8%B0--%EC%84%A4%EB%AA%85-1)
 * [왜 디스코드 봇인가?](https://github.com/uykm/P.Sbot-Discord#-%EC%99%9C-%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%B4%87%EC%9D%B8%EA%B0%80)
 
-#### ▶ [프로젝트 후기 & 팁](https://github.com/uykm/P.Sbot-Discord#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0--%ED%8C%81)
+#### ▶ [프로젝트 후기 & 팁](https://github.com/uykm/P.Sbot-Discord#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0--%ED%8C%81-1)
 * [시작부터 문제](https://github.com/uykm/P.Sbot-Discord#-%EC%8B%9C%EC%9E%91%EB%B6%80%ED%84%B0-%EB%AC%B8%EC%A0%9C)
 * [20초가 넘게 걸리는 응답 속도](https://github.com/uykm/P.Sbot-Discord#-20%EC%B4%88%EA%B0%80-%EB%84%98%EA%B2%8C-%EA%B1%B8%EB%A6%AC%EB%8A%94-%EC%9D%91%EB%8B%B5-%EC%86%8D%EB%8F%84-%EB%AC%B8%EC%A0%9C-)
 * [ERROR 429 (Riot API rate limits) & 효율적인 API 요청](https://github.com/uykm/P.Sbot-Discord#-%EC%9A%94%EC%B2%AD-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%B9%A8%EB%9D%BC%EC%A7%80%EB%8B%88-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-error-429-riot-api-rate-limits--%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-api-%EC%9A%94%EC%B2%AD-)
 * [비동기 방식으로 인한 오버헤드 문제](https://github.com/uykm/P.Sbot-Discord#-%EB%B9%84%EB%8F%99%EA%B8%B0-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EC%9D%B8%ED%95%9C-%EC%98%A4%EB%B2%84%ED%97%A4%EB%93%9C-%EB%AC%B8%EC%A0%9C-)
 
-#### ▶ [P.S 봇 사용법 - 사용자](https://github.com/uykm/P.Sbot-Discord#ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%82%AC%EC%9A%A9%EC%9E%90)
+#### ▶ [P.S 봇 사용법 - 사용자](https://github.com/uykm/P.Sbot-Discord#ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%82%AC%EC%9A%A9%EC%9E%90-1)
 * [P.S 봇 초대 방법](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EC%B4%88%EB%8C%80-%EB%B0%A9%EB%B2%95)
 * [P.S 봇 기능 & 명령어](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EB%AA%85%EB%A0%B9%EC%96%B4)
 
-#### ▶ [P.S 봇 사용법 - 개발자](https://github.com/uykm/P.Sbot-Discord#ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95-%EA%B0%9C%EB%B0%9C%EC%9E%90)
+#### ▶ [P.S 봇 사용법 - 개발자](https://github.com/uykm/P.Sbot-Discord#ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95-%EA%B0%9C%EB%B0%9C%EC%9E%90-1)
 
-#### ▶ [사용한 API](https://github.com/uykm/P.Sbot-Discord#%EC%82%AC%EC%9A%A9%ED%95%9C-api)
+#### ▶ [사용한 API](https://github.com/uykm/P.Sbot-Discord#%EC%82%AC%EC%9A%A9%ED%95%9C-api-1)
 
-#### ▶ [참고 자료](https://github.com/uykm/P.Sbot-Discord#%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C)
+#### ▶ [참고 자료](https://github.com/uykm/P.Sbot-Discord#%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C-1)
 
-#### ▶ [License](https://github.com/uykm/P.Sbot-Discord#license)
+#### ▶ [License](https://github.com/uykm/P.Sbot-Discord#license-1)
 
 <br>
 
@@ -78,7 +78,6 @@ API 명세서를 읽고 개발해보는 것이 이번이 처음이라 <U>잘못�
 > <br>
 > ➜ 아마도 오픈 소스가 없었다면 개발해내지 못했을 것 같습니다..
 
-<br> </br>
 
 ### ● 20초가 넘게 걸리는 응답 속도 </br>
 > 처음에 코드를 설계할 땐 오픈 소스를 참고하면서 request 방식(동기)으로 설계했더니 <U>응답 속도도 느리고</U>,
@@ -87,7 +86,6 @@ API 명세서를 읽고 개발해보는 것이 이번이 처음이라 <U>잘못�
 > <br>
 > ➜ *asyncio, aiohttp* 패키지를 활용한 **비동기** 방식으로 설계하여 상세 정보 요청에 대해 <U>병렬적으로 처리</U>할 수 있게 하여 문제를 해결헀습니다.
 
-<br> </br>
 
 ### ● ERROR 429 (Riot API rate limits) & 효율적인 API 요청 <br>
 > 개발용 Riot api key로 정보를 받아올 때 **요청 횟수에 제한**이 걸려 있습니다.(1초에 20번 2분에 100번)
@@ -101,7 +99,6 @@ API 명세서를 읽고 개발해보는 것이 이번이 처음이라 <U>잘못�
 > <br>
 > ➜ 코드를 어떤 구조로 설계하느냐에 따라 **API를 효율적으로 요청**할 수 있다는 부분을 기억해두면 좋을 것 같습니다.
 
-<br> </br>
 
 ### ● 비동기 방식으로 인한 오버헤드 문제 </br>
 > 만능인 줄만 알았던 비동기 방식도 API에 Json 형식의 파일을 요청할 때마다 <U>매번 세션(session)을 생성</U>해줘야 한다는 점 때문에
