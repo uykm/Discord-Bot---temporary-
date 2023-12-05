@@ -17,7 +17,7 @@
   
 * [Tistory - Nerdy](https://whiplash-bd.tistory.com/42)
 > Riot API 명세서에 대한 설명을 참고했습니다.
-
+</br>
 * [GitHub - NyaNyak](https://github.com/NyaNyak/discord-beebot)
 > 코드 구조를 참고했습니다.  
 > 챔피언 이름(한글/영어) 딕셔너리 파일(chamDB.py)을 그대로 가져와서 몇 가지 챔피언을 추가했습니다.  
