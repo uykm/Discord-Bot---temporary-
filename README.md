@@ -3,11 +3,17 @@
 프로젝트 참여자
 -
 
+프로젝트 설명
+-
+
+</br>
 
 
 사용한 API
 -
-   
+
+</br>
+
 ### Riot API
 * https://developer.riotgames.com/apis (API 명세서)   
 
