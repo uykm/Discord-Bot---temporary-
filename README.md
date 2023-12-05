@@ -107,7 +107,7 @@ P.S 봇 사용법 (개발자)
 3) 로컬 리포지터리로 **git clone** 합니다.
 
 4) [디스코드 개발자 포털](https://discord.com/developers/applications)로 접속한 후, 우측 상단 [New Application]을 클릭합니다.
-<br>
+
 5) 좌측 Bot 탭 > [Add Bot]을 클릭 > 아래처럼 Intents 관련 설정을 모두 ON으로 바꿔줍니다. (무조건)
 
 ![image](https://github.com/uykm/P.Sbot-Discord/assets/98581610/3d846094-2cd4-46ae-ac1b-9a967d91668b)
@@ -117,7 +117,9 @@ P.S 봇 사용법 (개발자)
 ![image](https://github.com/uykm/P.Sbot-Discord/assets/98581610/e81c1198-09a7-419c-afb3-b411bad9f915)
 
 7) 좌측 Bot 탭 > Token을 copy(reset을 해줘야 하는 경우엔 reset) > 로컬 리포지터리 내에 텍스트 파일(Discord_token)을 생성해 '붙여넣기' 합니다.
+
 8) [DEVELOPMENT API KEY 발급](https://developer.riotgames.com/) 혹은 만료 기간을 길게 하고 싶다면 [PERSONAL API KEY 발급](https://developer.riotgames.com/app-type)받은 후에, 디스코드 토큰을 텍스트 파일에 복사 붙여넣기 해준 것처럼 텍스트 파일(Riot_api_token)에 '붙여넣기' 해줍니다.
+
 9) 다시 개발 환경으로 돌아와 'main.py'를 실행! (끝)
 
 <br>
