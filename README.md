@@ -42,7 +42,7 @@
 P.S 봇 사용법 (사용자)
 -
 
-[P.S 봇 초대 링크](https://discord.com/api/oauth2/authorize?client_id=1179801477712195696&permissions=8&scope=bot)
+ * [P.S 봇 초대 링크](https://discord.com/api/oauth2/authorize?client_id=1179801477712195696&permissions=8&scope=bot)
 
 * P.S 봇 명령어
  * !전적검색 닉네임#태그 (ex. !전적검색 민규#TAG)
