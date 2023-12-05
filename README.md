@@ -6,11 +6,17 @@
 사용한 API
 -
 ### Riot API
-* https://developer.riotgames.com/apis (API 명세서))
+* https://developer.riotgames.com/apis (API 명세서)
 
 
 참고 자료
 -
+[Tistory Nerdy](https://whiplash-bd.tistory.com/42)
+```
+Riot API 명세서에 대한 설명을 참고했습니다.
+```
+
+
 
 License
 -
