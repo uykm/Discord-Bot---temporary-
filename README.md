@@ -148,7 +148,7 @@ P.S 봇 사용법 (개발자)
 <br>
 
 * [GitHub - NyaNyak](https://github.com/NyaNyak/discord-beebot)
-> 1. 코드 구조를 참고했습니다.  
+> 1. 파일 구조를 참고했습니다.  
 > 2. 챔피언 이름(한글/영어) 딕셔너리 파일(chamDB.py)을 그대로 가져와서 몇 가지 챔피언을 추가했습니다.  
 > 3. 전적 검색 결과를 표현하는 UI 디자인 코드(search.py)를 사용했습니다.
 
