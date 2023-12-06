@@ -9,7 +9,7 @@
 
 #### ▶ [P.S 봇 사용법 - 사용자](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95---%EC%82%AC%EC%9A%A9%EC%9E%90-1)
 * [P.S 봇 초대 방법](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EC%B4%88%EB%8C%80-%EB%B0%A9%EB%B2%95)
-* [P.S 봇 기능 & 명령어](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EB%AA%85%EB%A0%B9%EC%96%B4)
+* [P.S 봇 기능](https://github.com/uykm/P.S-Bot-_Discord#-ps-%EB%B4%87-%EA%B8%B0%EB%8A%A5-)
 
 #### ▶ [P.S 봇 사용법 - 개발자](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95---%EA%B0%9C%EB%B0%9C%EC%9E%90-1)
 
@@ -82,14 +82,14 @@
 
 <br>
 
-▶ P.S 봇 사용법 - 사용자
+▶ P.S 봇 사용법 & 기능 설명 - 사용자
 -
 ### ● P.S 봇 초대 방법
 1. 직접 [P.S 봇 초대 링크](https://discord.com/api/oauth2/authorize?client_id=1179801477712195696&permissions=8&scope=bot)를 통해 P.S 봇을 사용하고 싶은 서버로 초대합니다.</br> (단, 해당 서버에 대한 '관리자 권한'이 있어야만 초대 가능합니다.)
 
 </br>
 
-### ● P.S 봇 기능 & 명령어
+### ● `P.S 봇 기능`
 
 <br>
 
