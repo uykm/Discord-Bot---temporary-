@@ -18,7 +18,7 @@ async def get_latest_meta():
     for item in response['items']:
         video_info = item['snippet']
         title = video_info['title']
-        if "PS표 티어리스트" in title:  # "PS표 티어리스트" 라는 문구가 들어간 영상들 중 가장 최신 영상 탐색!
+        if "PS표 티어리스트" in title:  # "PS표 티어리스트" 라는 문구가 들어간 영상들 중 가장 최신 영상 탐색
             thumbnail_url = video_info['thumbnails']['high']['url']
             video_id = item['id']['videoId']
             video_url = f"https://www.youtube.com/watch?v={video_id}"
