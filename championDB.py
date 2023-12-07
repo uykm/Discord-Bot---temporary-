@@ -2,7 +2,7 @@ championsName = {"이즈리얼" : "Ezreal", "이즈" : "Ezreal", "진" : "Jhin",
              "케이틀린" : "Caitlyn", "케틀" : "Caitlyn", "제이스" : "Jayce", "그레이브즈" : "Graves", "그브" : "Graves",
              "카이사" : "Kaisa", "쓰레쉬" : "Thresh", "럭스" : "Lux", "블리츠크랭크" : "Blitzcrank", "블랭" : "Blitzcrank",
              "블츠" : "Blitzcrank", "탈론" : "Talon", "룰루" : "Lulu", "베인" : "Vayne", "제라스" : "Xerath", "요네" : "Yone",
-             "제드" : "Zed", "르블랑" : "LeBlanc", "루시안" : "Lucian", "빅토르" : "Viktor", "야스오" : "Yasuo", "레오나" : "Leona",
+             "제드" : "Zed", "르블랑" : "Leblanc", "루시안" : "Lucian", "빅토르" : "Viktor", "야스오" : "Yasuo", "레오나" : "Leona",
              "유미" : "Yuumi", "비에고" : "Viego", "사미라" : "Samira", "이렐리아" : "Irelia", "이렐" : "Irelia", "아칼리" : "Akali",
              "카밀" : "Camille", "아트록스" : "Aatrox", "아트" : "Aatrox", "잭스" : "Jax", "피오라" : "Fiora", "세트" : "Sett", "다리우스" : "Darius",
              "다리" : "Darius", "티모" : "Teemo", "말파이트" : "Malphite", "말파" : "Malphite", "탐켄치" : "TahmKench",
@@ -43,8 +43,8 @@ championsName = {"이즈리얼" : "Ezreal", "이즈" : "Ezreal", "진" : "Jhin",
              "소라카" : "Soraka", "라칸" : "Rakan", "자이라" : "Zyra", "브라움" : "Braum", "잔나" : "Janna", "바드" : "Bard",
              "렐" : "Rell", "소나" : "Sona", "세라핀" : "Seraphine", "시진핑" : "Seraphine", "타릭" : "Taric", "아무무" : "Amumu",
              # 추가된 챔피언들
-             "벨베스" : "Bel'Veth" , "브라이어" : "Briar", "제리" : "Zeri", "크산테" : "K'Sante", "밀리오" : "Milio", "닐라" : "Nilah", "나피리" : "Naafiri",
-             "레나타 글라스크" : "Renata Glasc", "레나타" : "Renata Glasc"
+             "벨베스" : "Belveth" , "브라이어" : "Briar", "제리" : "Zeri", "크산테" : "KSante", "밀리오" : "Milio", "닐라" : "Nilah", "나피리" : "Naafiri",
+             "레나타 글라스크" : "RenataGlasc", "레나타" : "RenataGlasc", "흐웨이" : "Hwei"
              }
 
 def find_kor_name(english_name):

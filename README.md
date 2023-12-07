@@ -1,30 +1,30 @@
-리그오브레전드 P.S Bot <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="35px" height="35px" title="px(픽셀) 크기 설정" alt="P.S"></img>
+League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="35px" height="35px" title="px(픽셀) 크기 설정" alt="P.S"></img>
 =
 카테고리
 -
-#### ▶ [프로젝트 참여자](https://github.com/uykm/P.Sbot-Discord#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B0%B8%EC%97%AC%EC%9E%90-1)
+#### ▶ [프로젝트 참여자]()
 
-#### ▶ [프로젝트 동기 & 설명](https://github.com/uykm/P.Sbot-Discord#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%8F%99%EA%B8%B0--%EC%84%A4%EB%AA%85-1)
-* [왜 디스코드 봇인가?](https://github.com/uykm/P.Sbot-Discord#-%EC%99%9C-%EB%94%94%EC%8A%A4%EC%BD%94%EB%93%9C-%EB%B4%87%EC%9D%B8%EA%B0%80)
+#### ▶ [프로젝트 동기 & 설명]()
+* [왜 디스코드 봇인가?]()
 
-#### ▶ [P.S 봇 사용법 - 사용자](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95---%EC%82%AC%EC%9A%A9%EC%9E%90-1)
-* [P.S 봇 초대 방법](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EC%B4%88%EB%8C%80-%EB%B0%A9%EB%B2%95)
-* [P.S 봇 기능](https://github.com/uykm/P.S-Bot-_Discord#-ps-%EB%B4%87-%EA%B8%B0%EB%8A%A5-)
+#### ▶ [P.S 봇 사용법 - 사용자]()
+* [P.S 봇 초대 방법]()
+* [P.S 봇 기능]()
 
-#### ▶ [P.S 봇 사용법 - 개발자](https://github.com/uykm/P.Sbot-Discord#-ps-%EB%B4%87-%EC%82%AC%EC%9A%A9%EB%B2%95---%EA%B0%9C%EB%B0%9C%EC%9E%90-1)
+#### ▶ [P.S 봇 사용법 - 개발자]()
 
-#### ▶ [사용한 API](https://github.com/uykm/P.Sbot-Discord#-%EC%82%AC%EC%9A%A9%ED%95%9C-api-1)
+#### ▶ [사용한 API]()
 
-#### ▶ [프로젝트 후기 & 팁](https://github.com/uykm/P.Sbot-Discord#-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9B%84%EA%B8%B0--%ED%8C%81-1)
-* [시작부터 문제](https://github.com/uykm/P.Sbot-Discord#-%EC%8B%9C%EC%9E%91%EB%B6%80%ED%84%B0-%EB%AC%B8%EC%A0%9C)
-* [20초가 넘게 걸리는 응답 속도](https://github.com/uykm/P.Sbot-Discord#-20%EC%B4%88%EA%B0%80-%EB%84%98%EA%B2%8C-%EA%B1%B8%EB%A6%AC%EB%8A%94-%EC%9D%91%EB%8B%B5-%EC%86%8D%EB%8F%84-%EB%AC%B8%EC%A0%9C-)
-* [ERROR 429 (Riot API rate limits) & 효율적인 API 요청](https://github.com/uykm/P.Sbot-Discord#-%EC%9A%94%EC%B2%AD-%EC%86%8D%EB%8F%84%EA%B0%80-%EB%B9%A8%EB%9D%BC%EC%A7%80%EB%8B%88-%EB%B0%9C%EC%83%9D%ED%95%98%EB%8A%94-error-429-riot-api-rate-limits--%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-api-%EC%9A%94%EC%B2%AD-)
-* [비동기 방식으로 인한 오버헤드 문제](https://github.com/uykm/P.Sbot-Discord#-%EB%B9%84%EB%8F%99%EA%B8%B0-%EB%B0%A9%EC%8B%9D%EC%9C%BC%EB%A1%9C-%EC%9D%B8%ED%95%9C-%EC%98%A4%EB%B2%84%ED%97%A4%EB%93%9C-%EB%AC%B8%EC%A0%9C-)
-* [디자인 문제](https://github.com/uykm/P.S-Bot-_Discord#-%EB%94%94%EC%9E%90%EC%9D%B8-%EB%AC%B8%EC%A0%9C-)
+#### ▶ [프로젝트 후기 & 팁]()
+* [시작부터 문제]()
+* [20초가 넘게 걸리는 응답 속도]()
+* [ERROR 429 (Riot API rate limits) & 효율적인 API 요청]()
+* [비동기 방식으로 인한 오버헤드 문제]()
+* [디자인 문제]()
 
-#### ▶ [참고 자료](https://github.com/uykm/P.Sbot-Discord#-%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C-1)
+#### ▶ [참고 자료]()
 
-#### ▶ [License](https://github.com/uykm/P.Sbot-Discord#-license-1)
+#### ▶ [License]()
 
 <br>
 
@@ -59,7 +59,7 @@
 
 * **롤**과 **디스코드**는 뗄레야 뗄 수 없는 관계인데, 이 점을 이용해서 재작년 Open Source Software 수업에서 어떤 팀이 롤 관련 서비스를 해주는 [꿀벌봇](https://github.com/NyaNyak/discord-beebot/tree/main)이라는 봇을 만든 것을 보고 아이디어가 되게 괜찮다고 생각했습니다. 
 하지만, 2년 전에 만들어진 만큼 **최신 업데이트 내용을 반영하지 못하고 있고**, 최근 바뀐 닉네임 형식이 <U>로직에 반영되지 않았다는 점</U>과 마찬가지로 그러한 변경사항을 아직 반영하지 못한 웹 사이트인 [your.gg](https://your.gg/ko/kr/home)에서 데이터를 얻어온다는 점에서 문제가 있었습니다. 
-앞서 말한 문제를 Riot API를 이용해 고치고, 롤을 10년을 넘게 해왔기 떄문에 경험들을 기반으로 **새로운 기능**을 추가해보고 싶다는 생각이 들었습니다.
+앞서 말한 문제를 Riot API를 이용해 고치고, 롤을 10년을 넘게 해왔기 떄문에 롤에 대한 경험들이 웬만한 사람보다 많이 쌓였을 것이라 자부하고 이러한 경험을 토대로 **적절한 기능**을 추가해보고 싶다는 생각이 들었습니다.
 
 <br>
 
@@ -77,7 +77,14 @@
 * `인게임 분석 기능 📋` <br> ➟ 롤을 많이 해보면서 우리팀에서 어떤 플레이어가 잘하는지를 파악하고 게임을 시작하는 것이 게임을 이기는데 많은 도움이 된다고 생각하기 때문에 모든 팀원의 전적을 일일히 확인해보지 않아도 잘하는 플레이어를 찾아주는 기능이 있으면 좋을 것 같습니다.
 
 
-* `아이템/스킬 빌드` ? <br> ➟ 롤 유저들은 롤을 키면 디스코드도 항상 함께 키듯이, [OP.GG](https://www.op.gg/champions)도 항상 켜주는 것이 습관이 됐기 때문에 굳이 넣을만한 기능은 아닌 것 같습니다. 
+* `아이템/스킬 빌드` ? <br> ➟ 롤 유저들은 롤을 키면 디스코드도 항상 함께 키듯이, [OP.GG](https://www.op.gg/champions)도 항상 켜주는 것이 습관이 됐기 때문에 굳이 넣을만한 기능은 아닌 것 같습니다.
+
+
+* `5대5 내전 팀 나누기` <br> ➟ 이 P.S Bot의 모티브인 '프로 관전러 P.S'와는 관련이 없는 기능이긴 하지만, 롤과 디스코드의 연관성으로부터 탄생한 P.S Bot 이라는 점에서 있으면 좋을 것 같다고 생각이 든 기능입니다. 
+롤 유저들에겐 랭크 게임이 주된 컨텐츠이긴 하지만, 롤을 좋아하는 유저라면 지인들과 하는 5대5 사용자 게임 내전을 <U>어쩌면 랭크 게임보다 더 좋아하는 경우가 많을 것</U>이라 생각합니다.
+하지만, 지인 10명을 특정 시간에 모은다는 것은 힘든 일이기 때문에, 이름 정도만 아는 사람들도 불러서 하는 경우가 많습니다. 그럴 경우엔 각자의 실력을 잘 모르니 양쪽 팀을 밸런스 있게 구성하기 위해서, <U>티어를 기반으로 하여
+네이버 사다리타기를 이용하는 등 직접 팀을 구성</U>해야 하는데, 이때 **P.S Bot이 10명의 게임 닉네임만 입력 받으면 각자의 티어 정보를 종합해서 밸런스있게 나눠줄 수 있다면** 팀을 구성하는 시간을 아낄 수 있어 좋을 것 같습니다. <br>
+  (내전은 보통 5대5가 가능한 경우에만 진행되기 때문에, 5대5 기준으로 팀을 나눌 수 있는 기능을 추가해봤습니다.)
 
 
 <br>
@@ -89,37 +96,71 @@
 
 </br>
 
-### ● `P.S 봇 기능`
+### ● P.S 봇 기능
 
 <br>
 
 * P.S 봇이 채널에 입장했을 때
 
-<img src="https://i.ibb.co/f2DLdtc/image.png" width="400" height="400"/>
+<img src="./image/서버입장시.png" width="450" height="500"/>
 
 <br>
 
 * 사람이 채널에 입장했을 때
 
+<img src="./image/멤버입장시.png" width="450" height="90"/>
 
 <br>
 
 * !메타정보 `!메타정보`
 > 현 메타가 어떤지 가장 잘 나타내주는 지표가 챔피언들의 티어 리스트이기 때문에 챔피언들의 티어 리스트를 정리한 `프로관전러 P.S` Youtube 영상을 바로 찾아볼 수 있게 도와줍니다.
 
+<img src="./image/!메타정보.png" width="450" height="500"/>
+
 <br>
 
 * !전적검색 닉네임#태그 `!전적검색 민규#TAG`
 > 해당 유저의 정보를 확인해볼 수 있습니다.
 
-<img src="https://i.ibb.co/sgYDpnt/img-1.png" width="400" height="400"/>
+<img src="./image/!전적검색 시작.png" width="180" height="100"/> <br>
+<img src="./image/!전적검색.png" width="300" height="550"/>
+<img src="./image/!전적검색2.png" width="280" height="550"/>
+<img src="./image/!전적검색 unranked.png" width="300" height="550"/>
+
+> 에러 처리
+
+<img src="./image/!전적검색 에러.png" width="300" height="120"/> 
 
 <br>
 
 * !인게임분석 닉네임#태그 `!인게임분석 민규#TAG`
 > 해당 게임에서 누구와 게임을 풀어나가야 할지, 적팀에서 누구를 조심해야 할지를 승률에 기반해서 알려줍니다.
 
-<img src="https://i.ibb.co/N7mf3Wk/image.png" width="400" height="400"/>
+<img src="./image/!인게임분석 초기.png" width="200" height="120"/> <br>
+<img src="./image/!인게임분석1.png" width="550" height="600"/> <img src="./image/!인게임분석(자신).png" width="550" height="600"/>
+
+> 에러 처리
+
+<img src="./image/!인게임분석 에러.png" width="300" height="120"/> 
+<img src="./image/!인게임분석 에러(게임중X).png" width="300" height="120"/>
+
+<img src="image/!내전팀빌딩 에러(구성실패).png" width="400" height="120"/>
+
+<br>
+
+* !내전팀빌딩 `내전팀빌딩`
+> 10명의 게임 닉네임가 각자 원하는 라인을 입력해주면 각자의 티어 정보와 선호 라인 정보를 종합해서 밸런스 맞게 블루/레드팀을 구성해줍니다.
+
+<img src="image/!내전팀빌딩1.png" width="400" height="100"/> <br>
+<img src="image/!내전팀빌딩2.png" width="400" height="100"/> <br>
+<img src="image/!내전팀빌딩 결과.png" width="400" height="500"/>
+
+> 에러 처리
+
+<img src="image/!내전팀빌딩 시간초과.png" width="400" height="150"/> <br>
+<img src="image/!내전팀빌딩 유저입력에러.png" width="400" height="200"/> <br>
+<img src="image/!내전팀빌딩 닉네임 에러.png" width="400" height="200"/> <br>
+<img src="image/!내전팀빌딩 에러(구성실패).png" width="400" height="130"/>
 
 <br>
 
@@ -168,7 +209,7 @@
 
 <br>
 
-▶ `프로젝트 후기 & 팁(?)`
+▶ 프로젝트 후기 & 팁(?)
 -
 
 사실 디스코드 봇은 어렸을 때부터 사용해봐서 친숙하기도 하고 Open Source가 많아 개발 난이도가 높지 않을 것이라 생각했는데, 
@@ -223,7 +264,23 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > ➜ 재작년에 선배님들이 올려주신 오픈 소스에 있는 디자인 템플릿을 가져와 사용하게 됐는데, **"Don't reinvent the wheel."**이라는 말이 있듯이
 > 잘 만들어진 템플릿이 있다면 굳이 직접 만들지 않고 활용하는 것이 <U>오픈 소스의 장점</U>이라고 생각합니다.
 
-</br>
+
+### ● 비동기 함수 인덱싱
+> 에러 발생: 'coroutine' object is not subscriptable <br>
+> ➜ 비동기 함수를 호출하면서 바로 인덱싱을 시도하면 발생하는 오류라고 합니다. <br>
+> 해결 전: `im = Image.new("RGB", (400, 580), await get_color(temp[3])[0])` <br>
+> 해결 후: `color = await get_color(temp[3]) /
+> im = Image.new("RGB", (400, 580), color[0])`
+
+
+### ● 팀 빌딩 로직 구현 문제 <br>
+> 처음엔 라인 별로 희망하는 사람을 입력받아 teambuild 함수에 파라미터 값으로 넘겨주는 방식으로 했었는데,
+> 이 때문에 다른 라인과 중복되는 유저가 있는지 체크하는 과정이 복잡해습니다. <br>
+> ➜ 유저 닉네임을 먼저 입력 받고, 각 유저마다 선호하는 라인을 저장해주는 방식으로 변경하여 두 집합에 서로 다른 요소('puuid')로 이루어져 있는지,
+> 빈 라인 없이 모든 라인이 채워질 수 있는지만 체크하면 될만큼 간단해졌습니다.
+
+
+<br>
 
 ▶ 참고 자료
 -
@@ -241,11 +298,16 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 <br>
 
 * [GitHub - NyaNyak](https://github.com/NyaNyak/discord-beebot)
-> 1. 파일 구조를 참고했습니다.  
+> 1. 전적 검색 기능을 구현할 때 search.py 파일 구조를 참고했습니다.  
 > 2. 챔피언 이름(한글/영어) 딕셔너리 파일(chamDB.py)을 그대로 가져와서 몇 가지 챔피언을 추가했습니다.  
 > 3. 전적 검색 결과를 표현하는 UI 디자인 코드(search.py)를 사용했습니다.
 
 </br>
+
+<br>
+
+* [Tistory - lektion-von-erfolglosigkeit](https://lektion-von-erfolglosigkeit.tistory.com/97)
+> Heroku 서비스를 이용한 배포 방법을 참고했습니다.
 
 ▶ License
 -

@@ -1,9 +1,8 @@
 import discord
 
-from PIL import ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 from bs4 import BeautifulSoup
-from PIL import Image
 
 from championDB import championsName
 
@@ -24,14 +23,15 @@ async def fetch_html(url, session, headers=None):
         return None
 
 
-def get_color(tier):
-    color = (0, 0, 0)
-    color2 = (0, 0, 0)
+async def get_color(tier):
 
-    if tier.startswith('UNRANKED'):
-        color = (230, 230, 230)  # 밝은 회색
-        color2 = (110, 110, 110)  # 더 어두운 회색
-    elif tier.startswith('IRON'):
+    color = (230, 230, 230)
+    color2 = (110, 110, 110)
+
+    if not tier:   # Unranked
+        return color, color2
+
+    if tier.startswith('IRON'):
         color = (160, 157, 156)  # 밝은 철색
         color2 = (70, 50, 47)  # 더 어두운 철색
     elif tier.startswith('BRONZE'):
@@ -77,13 +77,13 @@ async def get_player_info(session, summoner_name, summoner_tag):
     summoner_id = await fetch_json(summoner_id_url, session, {"X-Riot-Token": api_key})
     rank_url = f"https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{summoner_id.get('id')}"
     rank_data = await fetch_json(rank_url, session, {"X-Riot-Token": api_key})
-    if not rank_data:
-        return -1
+    if not rank_data :
+        return {
+            'level': summoner_id["summonerLevel"]
+        }
 
     # 필요한 랭크 정보 추출
     tier_info = next((tier for tier in rank_data if tier["queueType"] == "RANKED_SOLO_5x5"), None)
-    if not tier_info:
-        return "언랭입니다."
 
     # 티어 이미지 URL 생성
     tier = tier_info["tier"].lower()  # 티어 이름을 소문자로 변환
@@ -96,8 +96,9 @@ async def get_player_info(session, summoner_name, summoner_tag):
 
     return {
         'level': summoner_id["summonerLevel"],
-        'image': tier_image_url,
-        'tier': tier_info["tier"] + " " + tier_info["rank"],
+        'imageurl': tier_image_url,
+        'tier': tier_info["tier"],
+        'rank' : tier_info["rank"],
         'lp': tier_info["leaguePoints"],
         'wins': wins,
         'losses': losses,
@@ -137,6 +138,8 @@ async def get_most_champions(session, url):
 
 
 async def get_tier_image(session, tier_image_url):
+    if not tier_image_url:
+        tier_image_url = "https://i.namu.wiki/i/X8NG78aNjvyaK59CES1IThMB9W5WSMthgksBaVnY8kyRTkqe9wMk1SmfvZJbBZPTHykbCAz7VLLMIpoObf3dvUlsaYUid5QaW-5LAm2fJMwmYEjwh3GpBVhbd0qPVngtgSiWxug3KJZ9l64J9OBCIw.webp"
     async with session.get(tier_image_url) as response:
         if response.status == 200:
             # 응답으로부터 바이트 데이터를 가져옴
@@ -144,7 +147,7 @@ async def get_tier_image(session, tier_image_url):
             # BytesIO를 사용하여 바이트 데이터를 이미지로 변환
             im = Image.open(BytesIO(image_data))
             # 이미지 크기 조정
-            return im.resize((180, 180))
+            return im.resize((170, 170))
         else:
             return None
 
@@ -169,25 +172,35 @@ async def get_champion_image(session, champion_name):
 
 async def search(session, summoner_name, summoner_tag):
     user_info = await get_player_info(session, summoner_name, summoner_tag)
-    if user_info == -1 or user_info == "언랭입니다.":
-        # 오류 메시지 반환 또는 적절한 처리
+    if user_info == -1:
         return -1
 
     fow_url = "https://fow.kr/find/" + summoner_name + "-" + summoner_tag
     most_champions = await get_most_champions(session, fow_url)
 
-    # 숫자 값들을 문자열로 변환
     level_str = str(user_info.get('level'))
-    wins_str = str(user_info.get('wins'))
-    losses_str = str(user_info.get('losses'))
-    winrate_str = f"{user_info.get('winrate'):.2f}%"
+    tier = str(user_info.get('tier'))
 
-    temp = [summoner_name + "#" + summoner_tag, level_str, user_info.get('image'), user_info.get('tier'),
-            wins_str + " " + losses_str + "  " + winrate_str, most_champions]
+    if len(user_info) == 1: # 언랭크인 경우
+        temp = [summoner_name + "#" + summoner_tag, level_str, None, "티어 정보가 없습니다.", "랭크 게임 전적이 없습니다.", most_champions]
+    else:
+        wins_str = str(user_info.get('wins'))
+        losses_str = str(user_info.get('losses'))
+        winrate_str = f"{user_info.get('winrate'):.2f}%"
 
-    im = Image.new("RGB", (400, 580), get_color(temp[3])[0])
+        if tier == "MASTER" or tier == "GRANDMASTER" or tier == "CHALLENGER": # 마스터, 그랜드마스터, 챌린저
+            temp = [summoner_name + "#" + summoner_tag, level_str, user_info.get('imageurl'),
+                    str(user_info.get('tier')) + " " + str(user_info.get('lp')) + "LP",
+                    wins_str + " " + losses_str + "  " + winrate_str, most_champions]
+        else:
+            temp = [summoner_name + "#" + summoner_tag, level_str, user_info.get('imageurl'),
+                    str(user_info.get('tier')) + " " + str(user_info.get('rank')),
+                    wins_str + " " + losses_str + "  " + winrate_str, most_champions]
+
+    color = await get_color(temp[3])
+    im = Image.new("RGB", (400, 580), color[0])
     im2 = Image.new("RGB", (360, 540), (0, 0, 0))
-    im3 = Image.new("RGB", (380, 560), get_color(temp[3])[1])
+    im3 = Image.new("RGB", (380, 560), color[1])
     table = Image.new("RGB", (360, 315), (30, 32, 44))
     table2 = Image.new("RGB", (340, 90), (54, 54, 61))
     draw = ImageDraw.Draw(im)

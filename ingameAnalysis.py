@@ -15,10 +15,6 @@ async def get_champion_data(session):
     global champion_data_cache
     version_url = "https://ddragon.leagueoflegends.com/api/versions.json"
 
-    # 캐시된 데이터가 있는 경우, 캐시된 데이터 반환
-    if champion_data_cache:
-        return champion_data_cache
-
     # 캐시된 데이터가 없는 경우, 새로운 데이터 요청
     latest_version = await fetch_json(version_url, session)
     if latest_version != -1:
@@ -60,10 +56,11 @@ async def get_champion_image(session, champion_id):
         return None
 
 async def get_puuid(session, summoner_name, summoner_tag):
-    url = f"https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{summoner_name}/{summoner_tag}"
-    headers = {"X-Riot-Token": api_key}
-    data = await fetch_json(url, session, headers)
-    return data.get('puuid', -1) if data != -1 else -1
+    summoner_url = f"https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{summoner_name}/{summoner_tag}"
+    summoner_data = await fetch_json(summoner_url, session, {"X-Riot-Token": api_key})
+    if summoner_data == -1:
+        return -1
+    return summoner_data.get('puuid')
 
 # puuid를 이용해 닉네임과 태그를 얻어온다.
 async def get_summoner_name_and_tag_by_puuid(session, puuid):
@@ -79,7 +76,7 @@ async def get_summoner_id(session, puuid):
     url = f"https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{puuid}"
     headers = {"X-Riot-Token": api_key}
     data = await fetch_json(url, session, headers)
-    return data.get('id', -1) if data != -1 else -1
+    return data.get('id', -1) if data != None else -1
 
 async def get_current_game_info(session, summonerId):
     if summonerId == -1:
@@ -155,11 +152,13 @@ async def get_strategy(session, input_name, input_tag, puuid, current_game):
 
     if flag:
         our_team_message = f"우리 팀의 스타 플레이어는 \" 당신 \" 입니다. \n희생적인 플레이는 피하고 성장에 집중하세요!"
+        embed.set_thumbnail(url=our_ace_image)
+        embed.add_field(name="추천 코멘트 !", value=our_team_message, inline=False)
     else:
         our_team_message = (f"우리 팀의 스타 플레이어는 \" {our_kor_ace} \" 입니다. \n\" {our_kor_ace} \" 와(과) 함께 게임을 풀어나가는 것을 추천합니다!\n"
                             f"`{our_kor_ace} 정보:` ")
-    embed.set_thumbnail(url=our_ace_image)
-    embed.add_field(name="추천 코멘트 !", value=our_team_message + "`" + str(our_ace_name_and_tag) + "`", inline=False)
+        embed.set_thumbnail(url=our_ace_image)
+        embed.add_field(name="추천 코멘트 !", value=our_team_message + "`" + str(our_ace_name_and_tag) + "`", inline=False)
 
     # 적 팀 챔피언 이미지와 메시지 추가
     enemy_ace_image = await get_champion_image(session, enemy_ace_champion_eng)
