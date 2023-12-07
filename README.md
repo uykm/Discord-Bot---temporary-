@@ -283,9 +283,9 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > ➜ `pip3 install aiohttp` 명령어를 이용해 **aiohttp**를 해당 서버에 설치해주면 해결! <br>
 > (pip3도 설치되어 있지 않다면, 시스템 패키지 상태가 최신이 아니라는 이야기이기 때문에, `sudo apt update` > `sudo apt install python3-pip`를 입력해주면 됩니다.) <br>
 > ➜ 'aiohttp' 패키지 이외에도 필요한 module을 설치하라고 계속 나오는데, `pip3 install` 명령어를 이용해서 'discord', 'google-api-python-client' 같은 모듈들을 계속 설치해주면 됩니다! <br>
-<img src="img_1.png" width="400" height="50"/> <br>
-<img src="img.png" width="400" height="50"/> <br>
-<img src="img_2.png" width="400" height="50"/> <br>
+<img src="image/img_1.png" width="400" height="50"/> <br>
+<img src="image/img.png" width="400" height="50"/> <br>
+<img src="image/img_2.png" width="400" height="50"/> <br>
 > 추가적으로, 외부에 토큰(token)이나 api key를 소스코드에 그대로 남겨 공개되는 일은 없어야 하기 때문에 <U>환경 변수에 따로 저장해서 불러오는 방식</U>을 채택했습니다! <br>
 > ➜ `Run` > `Edit Configuration` > 환경 변수 등록 > `discord_token = os.getenv('TOKEN')`와 같은 코드로 환경 변수에 저장된 토큰 불러오기!
 
