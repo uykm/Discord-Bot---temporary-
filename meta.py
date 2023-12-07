@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-youtube_api_key = open("YOTUBE_API_KEY", "r").readline()
+youtube_api_key = open("YOTUBE_API_KEY.txt", "r").readline()
 
 async def get_latest_meta():
     youtube = build('youtube', 'v3', developerKey=youtube_api_key)

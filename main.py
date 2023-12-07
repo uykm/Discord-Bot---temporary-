@@ -14,7 +14,7 @@ if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 # 환경변수 값 가져오기
-token = open("DISCORD_TOKEN", "r").readline()
+token = open("DISCORD_TOKEN.txt", "r").readline()
 
 print(token)
 
