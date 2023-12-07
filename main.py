@@ -315,4 +315,4 @@ async def on_message(msg):
         await msg.channel.send(embed=embed)
         '''
 
-client.run('MTE3OTgwMTQ3NzcxMjE5NTY5Ng.GxL5V7.6iT1O-cvkZ5bdocDV_oZWKjbNlCYxHefjrG5o8')
+client.run(token)
