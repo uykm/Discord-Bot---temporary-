@@ -16,7 +16,7 @@ if sys.platform == 'win32':
 
 
 # 환경변수 값 가져오기
-discord_token = os.getenv('DISCORD_TOKEN')
+token = os.getenv('TOKEN')
 api_key = os.getenv('YOUTUBE_API_KEY')
 
 # intents 설정은 꼭 해줘야 한다!
@@ -318,4 +318,4 @@ async def on_message(msg):
         '''
 
 
-client.run(discord_token)
+client.run(token)
