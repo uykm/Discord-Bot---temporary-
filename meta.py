@@ -1,15 +1,13 @@
-import os
-
 import discord
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 
 load_dotenv()
 
-api_key = os.getenv('YOUTUBE_API_KEY')
+youtube_api_key = open("YOTUBE_API_KEY", "r").readline()
 
 async def get_latest_meta():
-    youtube = build('youtube', 'v3', developerKey=api_key)
+    youtube = build('youtube', 'v3', developerKey=youtube_api_key)
 
     request = youtube.search().list(
         part="snippet",

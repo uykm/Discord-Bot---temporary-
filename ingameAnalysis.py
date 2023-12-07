@@ -1,16 +1,12 @@
 import asyncio
-import os
-
 import aiohttp
 import discord
 
 # import request 방식으로 시도했지만 Discord 봇의 이벤트 루프가 블로킹(동기) HTTP 요청에 의해 차단되는 오류가 발생하기도 하고,
 # 응답 속도를 높이기 위해 비동기 방식으로 변경했습니다.
 from championDB import find_kor_name
-from dotenv import load_dotenv
 
-load_dotenv()
-api_key = os.getenv('RIOT_API_KEY')
+riot_api_key = open("RIOT_API_KEY", "r").readline()
 
 champion_data_cache = None
 

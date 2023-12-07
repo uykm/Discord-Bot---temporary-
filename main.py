@@ -3,23 +3,18 @@ import discord
 import asyncio
 import sys
 import time as t
-import os
 
 from teamBuild import checkID, teambuild
 from commandInfo import commandInfo
 from ingameAnalysis import get_summoner_id, get_puuid, get_current_game_info, get_strategy
 from meta import get_latest_meta
 from searchSummoner import search
-from dotenv import load_dotenv
-
-load_dotenv()
 
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 # 환경변수 값 가져오기
-token = os.getenv('DISCORD_TOKEN')
-api_key = os.getenv('YOUTUBE_API_KEY')
+token = open("DISCORD_TOKEN", "r").readline()
 
 print(token)
 

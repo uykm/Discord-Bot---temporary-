@@ -4,13 +4,9 @@ import discord
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
 from bs4 import BeautifulSoup
-
 from championDB import championsName
-from dotenv import load_dotenv
 
-load_dotenv()
-
-api_key = os.getenv('RIOT_API_KEY')
+riot_api_key = open("RIOT_API_KEY", "r").readline()
 
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:
@@ -72,15 +68,15 @@ async def get_color(tier):
 async def get_player_info(session, summoner_name, summoner_tag):
     # 소환사 정보 가져오기
     summoner_url = f"https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{summoner_name}/{summoner_tag}"
-    summoner_data = await fetch_json(summoner_url, session, {"X-Riot-Token": api_key})
+    summoner_data = await fetch_json(summoner_url, session, {"X-Riot-Token": riot_api_key})
     if not summoner_data:
         return -1
 
     # puuid를 사용하여 랭크 정보 가져오기
     summoner_id_url = f"https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{summoner_data.get('puuid')}"
-    summoner_id = await fetch_json(summoner_id_url, session, {"X-Riot-Token": api_key})
+    summoner_id = await fetch_json(summoner_id_url, session, {"X-Riot-Token": riot_api_key})
     rank_url = f"https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{summoner_id.get('id')}"
-    rank_data = await fetch_json(rank_url, session, {"X-Riot-Token": api_key})
+    rank_data = await fetch_json(rank_url, session, {"X-Riot-Token": riot_api_key})
     if not rank_data :
         return {
             'level': summoner_id["summonerLevel"]
