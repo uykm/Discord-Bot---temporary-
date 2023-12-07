@@ -192,6 +192,11 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 10) 다시 개발 환경으로 돌아와 'main.py'를 실행! (끝)
 
+
+### ● Cyclic을 이용한 P.S 봇 배포
+
+1) 
+
 <br>
 
 ▶ 사용한 API & 자료
@@ -304,10 +309,6 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 
 </br>
 
-<br>
-
-* [Tistory - lektion-von-erfolglosigkeit](https://lektion-von-erfolglosigkeit.tistory.com/97)
-> Heroku 서비스를 이용한 배포 방법을 참고했습니다.
 
 ▶ License
 -

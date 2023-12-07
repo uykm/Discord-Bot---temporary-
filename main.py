@@ -3,6 +3,7 @@ import discord
 import asyncio
 import sys
 import time as t
+import os
 
 from teamBuild import checkID, teambuild
 from commandInfo import commandInfo
@@ -13,8 +14,10 @@ from searchSummoner import search
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-TOKEN = open("Discord_token", "r").readline()
-Youtube_api_key = open("Youtube_api_key", "r").readline()
+
+# 환경변수 값 가져오기
+discord_token = os.getenv('DISCORD_TOKEN')
+api_key = os.getenv('YOUTUBE_API_KEY')
 
 # intents 설정은 꼭 해줘야 한다!
 intents = discord.Intents.default()
@@ -314,5 +317,5 @@ async def on_message(msg):
         await msg.channel.send(embed=embed)
         '''
 
-# 봇 토큰으로 봇 실행
-client.run(TOKEN)
+
+client.run(discord_token)

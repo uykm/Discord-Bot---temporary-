@@ -1,3 +1,4 @@
+import os
 import discord
 
 from PIL import Image, ImageDraw, ImageFont
@@ -6,7 +7,7 @@ from bs4 import BeautifulSoup
 
 from championDB import championsName
 
-api_key = open("Riot_api_key", "r").readline()
+api_key = os.getenv('RIOT_API_KEY')
 
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:

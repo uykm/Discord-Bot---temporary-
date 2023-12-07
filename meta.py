@@ -1,7 +1,9 @@
+import os
+
 import discord
 from googleapiclient.discovery import build
 
-api_key = open("Youtube_api_key", "r").readline()
+api_key = os.getenv('YOUTUBE_API_KEY')
 
 async def get_latest_meta():
     youtube = build('youtube', 'v3', developerKey=api_key)
