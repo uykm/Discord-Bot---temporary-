@@ -6,7 +6,7 @@ import discord
 # 응답 속도를 높이기 위해 비동기 방식으로 변경했습니다.
 from championDB import find_kor_name
 
-riot_api_key = open("RIOT_API_KEY", "r").readline()
+riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
 
 champion_data_cache = None
 

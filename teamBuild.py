@@ -1,12 +1,7 @@
-import os
-
 import discord
 import itertools
-from dotenv import load_dotenv
 
-load_dotenv()
-
-api_key = os.getenv('RIOT_API_KEY')
+riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
 
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:
@@ -18,19 +13,19 @@ async def fetch_json(url, session, headers=None):
 
 async def checkID(session, summoner_name, summoner_tag):
     url = f"https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{summoner_name}/{summoner_tag}"
-    headers = {"X-Riot-Token": api_key}
+    headers = {"X-Riot-Token": riot_api_key}
     data = await fetch_json(url, session, headers)
     return data.get('puuid', -1) if data != None else -1
 
 async def get_rank(session, puuid):
     # puuid를 사용하여 랭크 정보 가져오기
     summoner_id_url = f"https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{puuid}"
-    summoner_id = await fetch_json(summoner_id_url, session, {"X-Riot-Token": api_key})
+    summoner_id = await fetch_json(summoner_id_url, session, {"X-Riot-Token": riot_api_key})
     if not summoner_id or 'id' not in summoner_id:
         return None  # summoner_id가 없거나 유효하지 않은 경우
 
     rank_url = f"https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{summoner_id.get('id')}"
-    rank_data = await fetch_json(rank_url, session, {"X-Riot-Token": api_key})
+    rank_data = await fetch_json(rank_url, session, {"X-Riot-Token": riot_api_key})
     if not rank_data:
         return None  # 랭크 데이터가 없는 경우
 
