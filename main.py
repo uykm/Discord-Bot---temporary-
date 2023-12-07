@@ -16,8 +16,6 @@ if sys.platform == 'win32':
 # 환경변수 값 가져오기
 token = open("DISCORD_TOKEN.txt", "r").readline()
 
-print(token)
-
 # intents 설정은 꼭 해줘야 한다!
 intents = discord.Intents.default()
 intents.members = True
@@ -315,6 +313,5 @@ async def on_message(msg):
                          icon_url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
         await msg.channel.send(embed=embed)
         '''
-
 
 client.run(token)
