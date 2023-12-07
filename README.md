@@ -184,10 +184,8 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 10) 다시 개발 환경으로 돌아와 'main.py'를 실행! (끝)
 
+* Google Cloud Platform을 이용하여 상시 서버 배포까지 끝내면 GOOD!
 
-### ● Cyclic을 이용한 P.S 봇 배포
-
-1) 
 
 <br>
 
@@ -278,15 +276,17 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 
 
 ### Google Cloud Service를 이용한 P.S 봇 호스팅 <br>
-> [네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 자세히 잘 나와있어서 많은 도움이 됐습니다.
-> 저처럼 **비동기 방식**을 'requests'가 아닌 'aiohttp'를 사용한 경우엔 배포하려는 서버에서 aiohttp 모듈이 설치되어 있지 않아 ModuleNotFoundError 오류가 발생할 수 있습니다. <br>
-> ➜ `pip3 install aiohttp` 명령어를 이용해 **aiohttp**를 해당 서버에 설치해주면 해결! <br>
+> [네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 잘 나와있는데 서버 배포 과정이 복잡한 만큼 중간 중간 오류가 많았습니다. <br>
+> 1) 먼저, Ubuntu 시스템에서 새 버전으로 업그레이드 해줘야 하는데, 이전에 현재 설치된 모든 업데이트를 설치해야 합니다. <br>
+> **➜** `sudo apt update` > `sudo apt upgrade` > `sudo do-release-upgrade` <br> <br>
+> 2) 저처럼 **비동기 방식**을 'requests'가 아닌 'aiohttp'를 사용한 경우엔 배포하려는 서버에서 aiohttp 모듈이 설치되어 있지 않아 ModuleNotFoundError 오류가 발생할 수 있습니다. <br>
+> **➜** `pip3 install aiohttp` 명령어를 이용해 **aiohttp**를 해당 서버에 설치해주면 해결! <br>
 > (pip3도 설치되어 있지 않다면, 시스템 패키지 상태가 최신이 아니라는 이야기이기 때문에, `sudo apt update` > `sudo apt install python3-pip`를 입력해주면 됩니다.) <br>
-> ➜ 'aiohttp' 패키지 이외에도 필요한 module을 설치하라고 계속 나오는데, `pip3 install` 명령어를 이용해서 'discord', 'google-api-python-client' 같은 모듈들을 계속 설치해주면 됩니다! <br>
+> **➜** 'aiohttp' 패키지 이외에도 필요한 module을 설치하라고 계속 나오는데, `pip3 install` 명령어를 이용해서 'discord', 'google-api-python-client' 같은 모듈들을 계속 설치해주면 됩니다! <br>
 <img src="image/img_1.png" width="400" height="50"/> <br>
 <img src="image/img.png" width="400" height="50"/> <br>
-<img src="image/img_2.png" width="400" height="50"/> <br>
-> 추가적으로, 외부에 토큰(token)이나 api key를 소스코드에 그대로 남겨 공개되는 일은 없어야 하기 때문에 <U>환경 변수에 따로 저장해서 불러오는 방식</U>을 채택했습니다! <br>
+<img src="image/img_2.png" width="400" height="50"/> <br> <br>
+> 3) 외부에 토큰(token)이나 api key를 소스코드에 그대로 남겨 공개되는 일은 없어야 하기 때문에 <U>환경 변수에 따로 저장해서 불러오는 방식</U>을 채택했습니다! <br>
 > ➜ Notepad > `.env` > `DISCORD_TOKEN=<토큰>` > `.env` 파일을 **루트** 경로에 저장 ><br>
 > > `from dotenv import load_dotenv` > `load_dotenv()` > `discord_token = os.getenv('TOKEN')` # 환경 변수에 저장된 토큰 값 불러오기!
 

@@ -1,7 +1,12 @@
 import discord
 import itertools
+import os
+from dotenv import load_dotenv
 
-riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
+load_dotenv()
+riot_api_key = os.getenv('riot_api_key')
+
+# riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
 
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:

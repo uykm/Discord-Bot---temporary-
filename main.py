@@ -10,12 +10,10 @@ from ingameAnalysis import get_summoner_id, get_puuid, get_current_game_info, ge
 from meta import get_latest_meta
 from searchSummoner import search
 
+
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-# 환경변수 값 가져오기
-token = open("DISCORD_TOKEN.txt", "r").readline()
-print(token)
 
 # intents 설정은 꼭 해줘야 한다!
 intents = discord.Intents.default()
@@ -24,6 +22,15 @@ intents.message_content = True
 intents.guilds = True
 
 client = discord.Client(intents=intents)
+# 환경변수 값 가져오기
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv('DISCORD_TOKEN')
+# token = open("DISCORD_TOKEN.txt", "r").readline()
+print(TOKEN)
+
 
 @client.event
 async def on_ready():
@@ -315,4 +322,5 @@ async def on_message(msg):
         await msg.channel.send(embed=embed)
         '''
 
-client.run(token)
+
+client.run(TOKEN)
