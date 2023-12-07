@@ -6,6 +6,9 @@ from io import BytesIO
 from bs4 import BeautifulSoup
 
 from championDB import championsName
+from dotenv import load_dotenv
+
+load_dotenv()
 
 api_key = os.getenv('RIOT_API_KEY')
 

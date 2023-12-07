@@ -10,14 +10,18 @@ from commandInfo import commandInfo
 from ingameAnalysis import get_summoner_id, get_puuid, get_current_game_info, get_strategy
 from meta import get_latest_meta
 from searchSummoner import search
+from dotenv import load_dotenv
+
+load_dotenv()
 
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-
 # 환경변수 값 가져오기
-token = os.getenv('TOKEN')
+token = os.getenv('DISCORD_TOKEN')
 api_key = os.getenv('YOUTUBE_API_KEY')
+
+print(token)
 
 # intents 설정은 꼭 해줘야 한다!
 intents = discord.Intents.default()

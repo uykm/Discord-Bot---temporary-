@@ -287,7 +287,8 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 <img src="image/img.png" width="400" height="50"/> <br>
 <img src="image/img_2.png" width="400" height="50"/> <br>
 > 추가적으로, 외부에 토큰(token)이나 api key를 소스코드에 그대로 남겨 공개되는 일은 없어야 하기 때문에 <U>환경 변수에 따로 저장해서 불러오는 방식</U>을 채택했습니다! <br>
-> ➜ `Run` > `Edit Configuration` > 환경 변수 등록 > `discord_token = os.getenv('TOKEN')`와 같은 코드로 환경 변수에 저장된 토큰 불러오기!
+> ➜ Notepad > `.env` > `DISCORD_TOKEN=<토큰>` > `.env` 파일을 **루트** 경로에 저장 ><br>
+> > `from dotenv import load_dotenv` > `load_dotenv()` > `discord_token = os.getenv('TOKEN')` # 환경 변수에 저장된 토큰 값 불러오기!
 
 <br>
 
