@@ -124,6 +124,12 @@ async def on_message(msg):
             await msg.channel.send(embed=embed)
 
     if msg.content.startswith('!인게임분석 '):
+
+        try:
+            await msg.delete()
+        except discord.errors.NotFound:
+            pass
+
         parts = msg.content.split('#', 1)
         if len(parts) != 2:
             embed = discord.Embed(title="명령어 형식이 잘못되었습니다.",
@@ -139,7 +145,6 @@ async def on_message(msg):
             summoner_puuid = await get_puuid(session, summoner_name, summoner_tag)
 
             if summoner_puuid == -1:
-                await msg.delete()
                 embed = discord.Embed(title="해당 유저가 존재하지 않습니다.",
                                       description="정확한 닉네임이 맞는지 확인해주세요! (띄어쓰기, 영어 대/소문자)", color=0x62c1cc)
                 embed.set_thumbnail(url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
@@ -149,7 +154,6 @@ async def on_message(msg):
                 current_game = await get_current_game_info(session, summoner_id)
 
                 if current_game == -1:
-                    await msg.delete()
                     embed = discord.Embed(title="현재 게임 중이 아닙니다.",
                                           description="게임이 끝났나봐요! 아니면.. 혹시 닷지하셨나요?", color=0x62c1cc)
                     embed.set_thumbnail(url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
@@ -158,7 +162,6 @@ async def on_message(msg):
                     temp_message = await msg.channel.send("인게임 분석 중 ...")  # 임시 메시지 저장
                     t1 = t.time()
                     embed = await get_strategy(session, summoner_name, summoner_tag, summoner_puuid, current_game)
-                    await msg.delete()
                     await msg.channel.send(embed=embed)
                     await temp_message.delete()  # 임시 메시지 삭제
                     t2 = t.time()
