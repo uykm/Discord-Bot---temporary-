@@ -12,7 +12,7 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 ▶ [사용한 API & 자료](#-사용한-api--자료)
 
-▶ [프로젝트 후기 & 팁](#-프로젝트-후기--팁)
+▶ [프로젝트 후기 & 팁(?)](#-프로젝트-후기--팁)
 
 ▶ [참고 자료](#-참고-자료)
 
