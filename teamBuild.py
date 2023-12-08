@@ -3,9 +3,7 @@ import itertools
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-riot_api_key = os.getenv('riot_api_key')
-
+riot_api_key = os.getenv('RIOT_API_KEY')
 # riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
 
 async def fetch_json(url, session, headers=None):

@@ -10,10 +10,18 @@ from ingameAnalysis import get_summoner_id, get_puuid, get_current_game_info, ge
 from meta import get_latest_meta
 from searchSummoner import search
 
+# 환경변수 값 가져오기
+import os
+from dotenv import load_dotenv
+
+TOKEN = os.getenv('DISCORD_TOKEN')
+# TOKEN = open("DISCORD_TOKEN.txt", "r").readline()
+print(TOKEN)
+
+
 
 if sys.platform == 'win32':
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
 
 # intents 설정은 꼭 해줘야 한다!
 intents = discord.Intents.default()
@@ -22,14 +30,6 @@ intents.message_content = True
 intents.guilds = True
 
 client = discord.Client(intents=intents)
-# 환경변수 값 가져오기
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
-# token = open("DISCORD_TOKEN.txt", "r").readline()
-print(TOKEN)
 
 
 @client.event
@@ -37,12 +37,14 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game('분석'))
     print(f'{client.user}이 준비 과정을 성공적으로 마쳤습니다.')
 
+
 def find_first_channel(channels):
     position_array = [i.position for i in channels]
 
     for i in channels:
         if i.position == min(position_array):
             return i
+
 
 @client.event
 async def on_guild_join(guild):
@@ -53,6 +55,7 @@ async def on_guild_join(guild):
             await guild.system_channel.send("저를 사용하는 방법은 아래를 참고해주세요!")
             await guild.system_channel.send(embed=commandInfo())
             break
+
 
 @client.event
 async def on_member_join(member):
@@ -86,7 +89,6 @@ async def on_message(msg):
         else:
             await msg.delete()
             await msg.channel.send("죄송합니다. 아직 현재 메타 정보가 준비되지 않았습니다.")
-
 
     if msg.content.startswith('!전적검색 '):
         parts = msg.content.split('#', 1)
@@ -167,7 +169,8 @@ async def on_message(msg):
         async with aiohttp.ClientSession() as session:
             await msg.delete()
             temp_message = await msg.channel.send("내전에 참여할 10명의 유저의 닉네임과 태그를 '중복되지 않도록' 3분 이내에 입력해주세요."
-                                   "\n`ex.닉네임1#태그1/닉네임2#태그/...`")
+                                                  "\n`ex.닉네임1#태그1/닉네임2#태그/...`")
+
             def check(m):
                 return m.author == msg.author and m.channel == msg.channel
 
@@ -199,8 +202,9 @@ async def on_message(msg):
                 player_name, player_tag = player.split('#')
                 puuid = await checkID(session, player_name, player_tag)
                 if puuid == -1:
-                    embed = discord.Embed(title=f"'{player}' 라는 유저가 존재하지 않아요 ㅜㅜ 유저분들의 닉네임과 태그를 다시 확인해주세요! (띄어쓰기, 영어 대소문자)",
-                                          description="`ex) 닉네임1#태그1/닉네임2#태그/...`", color=0x62c1cc)
+                    embed = discord.Embed(
+                        title=f"'{player}' 라는 유저가 존재하지 않아요 ㅜㅜ 유저분들의 닉네임과 태그를 다시 확인해주세요! (띄어쓰기, 영어 대소문자)",
+                        description="`ex) 닉네임1#태그1/닉네임2#태그/...`", color=0x62c1cc)
                     embed.set_thumbnail(url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
                     await msg.channel.send(embed=embed)
                     await temp_message.delete()  # 임시 메시지 삭제
@@ -214,7 +218,8 @@ async def on_message(msg):
             for puuid in puuid_list:
                 name_tag = [name for name, p in nametag_puuid.items() if p == puuid][0]
                 while True:
-                    temp_message = await msg.channel.send(f"`{name_tag}`님이 원하시는 라인을 30초 내에 입력해주세요.\n`ex) 탑/정글/미드/원딜/서폿`")  # 임시 메시지 저장
+                    temp_message = await msg.channel.send(
+                        f"`{name_tag}`님이 원하시는 라인을 30초 내에 입력해주세요.\n`ex) 탑/정글/미드/원딜/서폿`")  # 임시 메시지 저장
 
                     try:
                         line_response = await client.wait_for('message', timeout=30, check=check)
@@ -245,7 +250,7 @@ async def on_message(msg):
             if embed == -1:
                 await temp_message.delete()
                 embed = discord.Embed(title="적절한 팀 구성을 찾을 수 없습니다.",
-                                     description="각 라인당 중복되지 않은 최소 ' 2 '명의 플레이어가 입력되어야 합니다!")
+                                      description="각 라인당 중복되지 않은 최소 ' 2 '명의 플레이어가 입력되어야 합니다!")
                 embed.set_thumbnail(url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
                 await msg.channel.send(embed=embed)
                 return
@@ -321,6 +326,5 @@ async def on_message(msg):
                          icon_url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
         await msg.channel.send(embed=embed)
         '''
-
 
 client.run(TOKEN)

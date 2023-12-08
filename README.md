@@ -275,7 +275,7 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > 빈 라인 없이 모든 라인이 채워질 수 있는지만 체크하면 될만큼 간단해졌습니다.
 
 
-### Google Cloud Service를 이용한 P.S 봇 호스팅 <br>
+### Google Cloud Platform를 이용한 P.S 봇 호스팅 <br>
 > [네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 잘 나와있는데 서버 배포 과정이 복잡한 만큼 중간 중간 오류가 많았습니다. <br>
 > 1) 먼저, Ubuntu 시스템에서 새 버전으로 업그레이드 해줘야 하는데, 이전에 현재 설치된 모든 업데이트를 설치해야 합니다. <br>
 > **➜** `sudo apt update` > `sudo apt upgrade` > `sudo do-release-upgrade` <br> <br>

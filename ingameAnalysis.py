@@ -9,7 +9,6 @@ from championDB import find_kor_name
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
 riot_api_key = os.getenv('RIOT_API_KEY')
 # riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
 
@@ -61,7 +60,7 @@ async def get_champion_image(session, champion_id):
 
 async def get_puuid(session, summoner_name, summoner_tag):
     summoner_url = f"https://asia.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{summoner_name}/{summoner_tag}"
-    summoner_data = await fetch_json(summoner_url, session, {"X-Riot-Token": api_key})
+    summoner_data = await fetch_json(summoner_url, session, {"X-Riot-Token": riot_api_key})
     if summoner_data == -1:
         return -1
     return summoner_data.get('puuid')
@@ -69,7 +68,7 @@ async def get_puuid(session, summoner_name, summoner_tag):
 # puuid를 이용해 닉네임과 태그를 얻어온다.
 async def get_summoner_name_and_tag_by_puuid(session, puuid):
     url = f"https://asia.api.riotgames.com/riot/account/v1/accounts/by-puuid/{puuid}"
-    headers = {"X-Riot-Token": api_key}
+    headers = {"X-Riot-Token": riot_api_key}
     data = await fetch_json(url, session, headers)
     if data != -1:
         return data.get('gameName', '') + '#' + data.get('tagLine', '')
@@ -78,7 +77,7 @@ async def get_summoner_name_and_tag_by_puuid(session, puuid):
 
 async def get_summoner_id(session, puuid):
     url = f"https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/{puuid}"
-    headers = {"X-Riot-Token": api_key}
+    headers = {"X-Riot-Token": riot_api_key}
     data = await fetch_json(url, session, headers)
     return data.get('id', -1) if data != None else -1
 
@@ -86,13 +85,13 @@ async def get_current_game_info(session, summonerId):
     if summonerId == -1:
         return -1
     url = f"https://kr.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/{summonerId}"
-    headers = {"X-Riot-Token": api_key}
+    headers = {"X-Riot-Token": riot_api_key}
     async with aiohttp.ClientSession() as session:
         return await fetch_json(url, session, headers)
 
 async def get_ranked_data(session, summoner_id):
     ranked_url = f"https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{summoner_id}"
-    ranked_data = await fetch_json(ranked_url, session, {"X-Riot-Token": api_key})
+    ranked_data = await fetch_json(ranked_url, session, {"X-Riot-Token": riot_api_key})
     if not ranked_data:
         return None
     # 솔로 랭크 정보만 필터링
