@@ -13,6 +13,9 @@ import os
 
 riot_api_key = os.getenv('RIOT_API_KEY')
 
+# Arial 폰트 경로
+font_path = "/usr/share/fonts/truetype/msttcorefonts/Arial.ttf"
+
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:
         print(response.status)
@@ -209,8 +212,14 @@ async def search(session, summoner_name, summoner_tag):
     table = Image.new("RGB", (360, 315), (30, 32, 44))
     table2 = Image.new("RGB", (340, 90), (54, 54, 61))
     draw = ImageDraw.Draw(im)
-    font = ImageFont.truetype("malgunbd.ttf", 17)
-    font2 = ImageFont.truetype("malgunbd.ttf", 15)
+    try:
+        # 지정된 폰트 파일을 사용
+        font = ImageFont.truetype("malgunbd.ttf", 17)
+        font2 = ImageFont.truetype("malgunbd.ttf", 15)
+    except IOError:
+        # 지정된 폰트를 가져오지 못할 경우 기본 폰트 사용
+        font = ImageFont.truetype(font_path, 17)
+        font2 = ImageFont.truetype(font_path, 15)
     im.paste(im3, (10, 10))
     im.paste(im2, (20, 20))
     draw.text((40, 35), temp[0], font=font, fill=(255, 255, 255))

@@ -276,9 +276,10 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > 빈 라인 없이 모든 라인이 채워질 수 있는지만 체크하면 될만큼 간단해졌습니다.
 
 
-### Google Cloud Platform를 이용한 P.S 봇 호스팅 <br>
-> [네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 잘 나와있는데 서버 배포 과정이 복잡한 만큼 중간 중간 오류가 많았습니다. <br>
-> 1) 먼저, Ubuntu 시스템에서 새 버전으로 업그레이드 해줘야 하는데, 이전에 현재 설치된 모든 업데이트를 설치해야 합니다. <br>
+### Google Cloud Platform를 이용한 P.S 봇 호스팅 (서버 배포) <br>
+> [네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 잘 나와있는데 서버 배포 과정이 복잡한 만큼 중간 중간 많이 헤맸습니다. <br>
+> <br> **" 과정 (4)가 가장 중요 !! "** <br><br>
+> 1) 먼저, 필요한 업데이트를 아래와 같이 진행합니다. <br>
 > **➜** `sudo apt update` > `sudo apt upgrade` > `sudo do-release-upgrade` <br> <br>
 > 2) 저처럼 **비동기 방식**을 'requests'가 아닌 'aiohttp'를 사용한 경우엔 배포하려는 서버에서 aiohttp 모듈이 설치되어 있지 않아 ModuleNotFoundError 오류가 발생할 수 있습니다. <br>
 > **➜** `pip3 install aiohttp` 명령어를 이용해 **aiohttp**를 해당 서버에 설치해주면 해결! <br>
@@ -287,9 +288,13 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 <img src="image/img_1.png" width="400" height="50"/> <br>
 <img src="image/img.png" width="400" height="50"/> <br>
 <img src="image/img_2.png" width="400" height="50"/> <br> <br>
-> 3) 외부에 토큰(token)이나 api key를 소스코드에 그대로 남겨 공개되는 일은 없어야 하기 때문에 <U>환경 변수에 따로 저장해서 불러오는 방식</U>을 채택했습니다! <br>
-> ➜ Notepad > `.env` > `DISCORD_TOKEN=<토큰>` > `.env` 파일을 **루트** 경로에 저장 ><br>
+> 3) Git Repository에 토큰(token)이나 api key를 소스코드에 그대로 남겨 공개되는 일은 없어야 하기 때문에 <U>환경 변수에 따로 저장해서 불러오는 방식</U>을 채택했습니다! <br>
+> ➜ Notepad > `.env` > `DISCORD_TOKEN=<토큰>` > `.env` 파일을 **루트** 디렉토리에 저장 ><br>
 > > `from dotenv import load_dotenv` > `load_dotenv()` > `discord_token = os.getenv('TOKEN')` # 환경 변수에 저장된 토큰 값 불러오기!
+> 4) GCP를 이용한 Ubuntu 서버에 디스코드 봇 배포!
+> `nano ~/.bashrc` > `export DISCORD_TOKEN='토큰 or API KEY'` > 파일 저장: `Ctrl + 0` 후에 `Ctrl + x` (나가기) > 환경 변수 저장: `source ~/.bashrc` > 저장 확인: `echo $DISCORD_TOKEN`
+> 5) 
+
 
 <br>
 
