@@ -294,7 +294,7 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > 4) GCP를 이용한 Ubuntu 서버에 디스코드 봇 배포!
 > `nano ~/.bashrc` > `export DISCORD_TOKEN='토큰 or API KEY'` > 파일 저장: `Ctrl + 0` 후에 `Ctrl + x` (나가기) > 환경 변수 저장: `source ~/.bashrc` > 저장 확인: `echo $DISCORD_TOKEN`
 > 5) 
-
+<img src="image/bashrc파일편집.png" width="400" height="600"/> <br> <br>
 
 <br>
 
