@@ -54,16 +54,16 @@ async def on_guild_join(guild):
     for channel in guild.text_channels:
         if channel.permissions_for(guild.me).send_messages:
             await guild.system_channel.send("\"" + guild.name + "\"" + " 서버 여러분 안녕하세요!")
-            await guild.system_channel.send("저는 여러분이 롤을 편하게 즐길 수 있게 도와드리는 P.S 봇입니다.")
-            await guild.system_channel.send("저를 사용하는 방법은 아래를 참고해주세요!")
+            await guild.system_channel.send("저는 여러분이 롤을 편하게 즐길 수 있게 도와드리는 P.S Bot입니다.")
+            await guild.system_channel.send("저를 사용하는 방법에 대해선 아래를 참고해주세요!")
             await guild.system_channel.send(embed=commandInfo())
             break
 
 
 @client.event
 async def on_member_join(member):
-    await find_first_channel(member.guild.text_channels).send(member.name + "님 안녕하세요, 저는 P.S 봇입니다.")
-    await find_first_channel(member.guild.text_channels).send("저를 사용하는 방법은 \"!명령어\" 를 입력하시면 확인하실 수 있습니다.")
+    await find_first_channel(member.guild.text_channels).send(member.name + "님 안녕하세요, 저는 P.S Bot입니다.")
+    await find_first_channel(member.guild.text_channels).send("도움이 필요하시면 \"!도움\" 을 외쳐주세요!")
 
 
 @client.event

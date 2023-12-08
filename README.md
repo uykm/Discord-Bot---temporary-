@@ -93,31 +93,31 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 <br>
 
-* P.S 봇이 채널에 입장했을 때
+* **P.S Bot이 채널에 입장했을 때**
 
 <img src="./image/서버입장시.png" width="450" height="500"/>
 
 <br>
 
-* 사람이 채널에 입장했을 때
+* **누군가 채널에 입장했을 때**
 
 <img src="./image/멤버입장시.png" width="450" height="90"/>
 
 <br>
 
-* !도움 `!도움`
+* **!도움** `!도움`
 > `P.S Bot`을 사용하기 위한 명령어들을 설명해줍니다.
 
 <br>
 
-* !메타정보 `!메타정보`
+* **!메타정보** `!메타정보`
 > 현 메타가 어떤지 가장 잘 나타내주는 지표가 챔피언들의 티어 리스트이기 때문에 챔피언들의 티어 리스트를 정리한 `프로관전러 P.S` Youtube 영상을 바로 찾아볼 수 있게 도와줍니다.
 
 <img src="./image/!메타정보.png" width="450" height="500"/>
 
 <br>
 
-* !전적검색 닉네임#태그 `!전적검색 민규#TAG`
+* **!전적검색 닉네임#태그** `!전적검색 민규#TAG`
 > 해당 유저의 정보를 확인해볼 수 있습니다.
 
 <img src="./image/!전적검색 시작.png" width="180" height="100"/> <br>
@@ -131,7 +131,7 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 <br> <br>
 
-* !인게임분석 닉네임#태그 `!인게임분석 민규#TAG`
+* **!인게임분석 닉네임#태그** `!인게임분석 민규#TAG`
 > 해당 게임에서 누구와 게임을 풀어나가야 할지, 적팀에서 누구를 조심해야 할지를 승률에 기반해서 알려줍니다.
 
 <img src="./image/!인게임분석 초기.png" width="200" height="120"/> <br>
@@ -146,7 +146,7 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 <br>
 
-* !내전팀빌딩 `내전팀빌딩`
+* **!내전팀빌딩** `내전팀빌딩`
 > 10명의 게임 닉네임가 각자 원하는 라인을 입력해주면 각자의 티어 정보와 선호 라인 정보를 종합해서 밸런스 맞게 블루/레드팀을 구성해줍니다.
 
 <img src="image/!내전팀빌딩1.png" width="400" height="100"/> <br>
@@ -305,11 +305,11 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > ➜ Notepad > `.env` > `DISCORD_TOKEN=<토큰>` > `.env` 파일을 **루트** 디렉토리에 저장 ><br>
 > > `from dotenv import load_dotenv` > `load_dotenv()` > `discord_token = os.getenv('TOKEN')` (환경 변수에 저장된 토큰 값 불러오기!)
 > 4) GCP를 이용한 Ubuntu 서버에 디스코드 봇 배포! <br>
-> (`.env` 파일을 서버에 저장해도 되지만, 외부에 공개하지 않기 위해서 토큰 정보를 서버에 그대로 저장해줬습니다.)
-> `nano ~/.bashrc` > `export DISCORD_TOKEN='토큰 or API KEY'` > 파일 저장: `Ctrl + 0` 후에 `Ctrl + x` (나가기) > 환경 변수 저장: `source ~/.bashrc` > 저장 확인: `echo $DISCORD_TOKEN`
+> (`.env` 파일을 서버에 저장해도 되지만, 외부에 공개하지 않기 위해서 토큰 정보를 서버에 그대로 저장해줬습니다.) <br>
+> `nano ~/.bashrc` ➜ `export DISCORD_TOKEN='토큰 or API KEY'` ➜ 파일 저장: `Ctrl + 0` 후에 `Ctrl + x` (나가기) ➜ 환경 변수 저장: `source ~/.bashrc` ➜ 저장 확인: `echo $DISCORD_TOKEN`
 > <img src="image/bashrc파일편집.png" width="400" height="600"/> <br> <br>
 > 5) 로컬 디렉터리엔 저장되어 있지만, 서버엔 저장되어 있지 않은 파일들은 깃을 통해 저장해주던지 구글 드라이브를 통해 저장해주던지 해야 정상 작동합니다.
-> <br> ex) `malgunbd.ttf` <br> <br>
+> <br> ex) 폰트 파일 - `malgunbd.ttf` <br> <br>
 > 6) SSH 창을 끄더라도 서버가 켜져 있어야 하므로, `tmux`로 이동해 `python3 main.py`를 쳐서 어플리케이션을 켜주면 끝!
 
 
