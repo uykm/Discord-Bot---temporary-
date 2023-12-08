@@ -57,7 +57,7 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 ### ● 필요하다고 생각하는 기능
 
-* `명령어 설명문` ➟ 봇을 사용하기 위해선, P.S 봇이 서버에 입장하거나 새로운 멤버가 서버이 입장했을 때, 그리고 `!명령어`를 입력했을 때 명령어 정보를 알려주는 기능이 필요합니다.
+* `명령어 설명문` ➟ 봇을 사용하기 위해선, P.S 봇이 서버에 입장하거나 새로운 멤버가 서버이 입장했을 때, 그리고 `!도움`를 입력했을 때 명령어 정보를 알려주는 기능이 필요합니다.
 
 
 * `현 메타에 대한 정보` <br> ➟ 오랜만에 플레이하는 유저들이나 랭크를 올리고자 하는 유저들에겐 현 메타를 이해하는 것이 먼저인데, 업데이트가 빈번하다는 롤의 특성도 있고 매번 영상이나 자료를 찾아보기 귀찮았기 때문에 필요한 기능이라고 생각합니다.
@@ -97,11 +97,16 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 <img src="./image/서버입장시.png" width="450" height="500"/>
 
-<br>
+<br> <br>
 
 * 사람이 채널에 입장했을 때
 
 <img src="./image/멤버입장시.png" width="450" height="90"/>
+
+<br> <br>
+
+* !도움 `!도움`
+> `P.S Bot`을 사용하기 위한 명령어들을 설명해줍니다.
 
 <br>
 
@@ -276,9 +281,9 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > 빈 라인 없이 모든 라인이 채워질 수 있는지만 체크하면 될만큼 간단해졌습니다.
 
 
-### Google Cloud Platform를 이용한 P.S 봇 호스팅 (서버 배포.. It's so hard..) <br>
-> [네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 잘 나와있는데 서버 배포 과정이 복잡한 만큼 중간 중간 많이 헤맸습니다. <br>
-> <br> **" 과정 (4)가 가장 중요 !! "** <br><br>
+### ● Google Cloud Platform를 이용한 P.S 봇 호스팅 (서버 배포.. It's so hard..) <br>
+[네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 잘 나와있는데 서버 배포 과정이 복잡한 만큼 중간 중간 많이 헤맸습니다. <br>
+<br> **" 과정 (4)가 가장 중요 !! "** <br>
 > 1) 먼저, 필요한 업데이트를 아래와 같이 진행합니다. <br>
 > **➜** `sudo apt update` > `sudo apt upgrade` > `sudo do-release-upgrade` <br> <br>
 > 2) 저처럼 **비동기 방식**을 'requests'가 아닌 'aiohttp'를 사용한 경우엔 배포하려는 서버에서 aiohttp 모듈이 설치되어 있지 않아 ModuleNotFoundError 오류가 발생할 수 있습니다. <br>
@@ -318,8 +323,9 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 <br>
 
 * [GitHub - NyaNyak](https://github.com/NyaNyak/discord-beebot)
-> 1. 전적 검색 기능을 구현할 때 search.py 파일 구조를 참고했습니다.  
-> 2. 챔피언 이름(한글/영어) 딕셔너리 파일(chamDB.py)을 그대로 가져와서 몇 가지 챔피언을 추가했습니다.  
+> 1. 명령어 설명 코드를 참고했습니다.
+> 2. 전적 검색 기능을 구현할 때 search.py 파일 구조를 참고했습니다.  
+> 2. 챔피언 이름(한글/영어) 딕셔너리 파일(chamDB.py)을 그대로 가져온 후에 몇 가지 필요한 챔피언 데이터를 추가했습니다.  
 > 3. 전적 검색 결과를 표현하는 UI 디자인 코드(search.py)를 사용했습니다.
 
 </br>

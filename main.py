@@ -71,7 +71,7 @@ async def on_message(msg):
     if msg.author == client.user:
         return None
 
-    if msg.content == ('!명령어'):
+    if msg.content == ('!도움'):
         await msg.delete()
         await msg.channel.send(embed=commandInfo())
 
