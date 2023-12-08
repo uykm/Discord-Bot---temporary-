@@ -276,7 +276,7 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > 빈 라인 없이 모든 라인이 채워질 수 있는지만 체크하면 될만큼 간단해졌습니다.
 
 
-### Google Cloud Platform를 이용한 P.S 봇 호스팅 (서버 배포) <br>
+### Google Cloud Platform를 이용한 P.S 봇 호스팅 (서버 배포.. It's so hard..) <br>
 > [네이버 블로그 - 1윤시크](https://blog.naver.com/dnsjdbstlr/222289626549)에 호스팅하는 과정이 잘 나와있는데 서버 배포 과정이 복잡한 만큼 중간 중간 많이 헤맸습니다. <br>
 > <br> **" 과정 (4)가 가장 중요 !! "** <br><br>
 > 1) 먼저, 필요한 업데이트를 아래와 같이 진행합니다. <br>
