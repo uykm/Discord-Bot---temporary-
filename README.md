@@ -127,9 +127,9 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 > 에러 처리
 
-<img src="./image/!전적검색 에러.png" width="300" height="120"/> 
+<img src="./image/!전적검색 에러.png" width="350" height="300"/> 
 
-<br>
+<br> <br>
 
 * !인게임분석 닉네임#태그 `!인게임분석 민규#TAG`
 > 해당 게임에서 누구와 게임을 풀어나가야 할지, 적팀에서 누구를 조심해야 할지를 승률에 기반해서 알려줍니다.
