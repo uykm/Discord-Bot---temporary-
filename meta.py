@@ -1,7 +1,6 @@
 import discord
 from googleapiclient.discovery import build
 import os
-from dotenv import load_dotenv
 
 youtube_api_key = os.getenv('YOUTUBE_API_KEY')
 # youtube_api_key = open("YOTUBE_API_KEY.txt", "r").readline()

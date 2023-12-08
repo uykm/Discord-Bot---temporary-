@@ -12,7 +12,6 @@ from searchSummoner import search
 
 # 환경변수 값 가져오기
 import os
-from dotenv import load_dotenv
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 # TOKEN = open("DISCORD_TOKEN.txt", "r").readline()

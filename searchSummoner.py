@@ -5,7 +5,6 @@ from io import BytesIO
 from bs4 import BeautifulSoup
 from championDB import championsName
 import os
-from dotenv import load_dotenv
 
 riot_api_key = os.getenv('RIOT_API_KEY')
 # riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
