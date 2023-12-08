@@ -1,7 +1,7 @@
 import discord
 
 def commandInfo():
-    embed = discord.Embed(title="기능 설명", description="`!도움👋`\nP.S 봇은 현재 아래와 같은 기능들을 지원하고 있습니다!", color=0xf3bb76)
+    embed = discord.Embed(title="기능 설명 👋", description="`!도움`\nP.S 봇은 현재 아래와 같은 기능들을 지원하고 있습니다!", color=0xf3bb76)
     # url 주소가 너무 길면 오류가 발생해 이미지를 직접 포스팅한 주소로 받아왔습니다.
     embed.set_thumbnail(url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
     embed.add_field(name="!메타정보 📲", value="현재 챔피언들의 티어리스트를 정리한 `프로관전러 P.S` Youtube 영상을 바로 찾아볼 수 있게 도와드립니다.\n", inline=False)
