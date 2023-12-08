@@ -85,6 +85,7 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 -
 ### ● P.S 봇 초대 방법
 1. 직접 [P.S 봇 초대 링크](https://discord.com/api/oauth2/authorize?client_id=1179801477712195696&permissions=8&scope=bot)를 통해 P.S 봇을 사용하고 싶은 서버로 초대합니다.</br> (단, 해당 서버에 대한 '관리자 권한'이 있어야만 초대 가능합니다.)
+> 현재 GCP(Google Cloud Platform)를 통해 서버에 배포해놓았기 때문에, 현재 `P.S Bot`을 바로 이용 가능합니다!
 
 </br>
 

@@ -10,7 +10,7 @@ from ingameAnalysis import get_summoner_id, get_puuid, get_current_game_info, ge
 from meta import get_latest_meta
 from searchSummoner import search
 
-# 환경변수 값 가져오기
+# Ubuntu 서버에 저장된 환경변수 값 가져오기
 import os
 
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -74,11 +74,11 @@ async def on_message(msg):
     if msg.content == ('!메타정보'):
         temp_message = await msg.channel.send("자료 불러오는 중 ...")  # 임시 메시지 저장
         embed = await get_latest_meta()
+        await temp_message.delete()  # 임시 메시지 삭제
         if embed:
             t1 = t.time()
             await msg.channel.send(embed=embed)
             await msg.delete()
-            await temp_message.delete()  # 임시 메시지 삭제
             t2 = t.time()
             embed = discord.Embed(title="데이터 출처", description="[Youtube] 프로관전러 P.S", color=0x62c1cc)
             embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
@@ -102,13 +102,13 @@ async def on_message(msg):
         summoner_tag = parts[1]
 
         async with aiohttp.ClientSession() as session:
+            temp_message = await msg.channel.send("전적 검색 중 ...")  # 임시 메시지 저장
             file = await search(session, summoner_name, summoner_tag)
             if file == -1:
                 embed = discord.Embed(title="해당 유저가 존재하지 않습니다.",
                                       description="닉네임을 다시 확인해주세요! (띄어쓰기, 영어 대소문자)", color=0x62c1cc)
                 embed.set_thumbnail(url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
             else:
-                temp_message = await msg.channel.send("전적 검색 중 ...")  # 임시 메시지 저장
                 await msg.delete()
                 t1 = t.time()
                 await msg.channel.send(file=file)
@@ -256,7 +256,7 @@ async def on_message(msg):
             await msg.channel.send(embed=embed)
             await temp_message.delete()  # 임시 메시지 삭제
             t2 = t.time()
-            embed = discord.Embed(title="데이터 출처", description="Riot API / 나무위키", color=0x62c1cc)
+            embed = discord.Embed(title="데이터 출처", description="Riot API", color=0x62c1cc)
             embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
             embed.set_footer(text="플레이어들의 티어를 분석하여 팀을 빌딩한 결과입니다.",
                              icon_url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
