@@ -13,8 +13,8 @@ import os
 
 riot_api_key = os.getenv('RIOT_API_KEY')
 
-# Arial 폰트 경로
-font_path = "/usr/share/fonts/truetype/msttcorefonts/Arial.ttf"
+# 서버에 저장된 malgunbd 폰트 경로
+font_path = "/home/digi1k2001/malgunbd.ttf"
 
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:

@@ -290,11 +290,15 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 <img src="image/img_2.png" width="400" height="50"/> <br> <br>
 > 3) Git Repository에 토큰(token)이나 api key를 소스코드에 그대로 남겨 공개되는 일은 없어야 하기 때문에 <U>환경 변수에 따로 저장해서 불러오는 방식</U>을 채택했습니다! <br>
 > ➜ Notepad > `.env` > `DISCORD_TOKEN=<토큰>` > `.env` 파일을 **루트** 디렉토리에 저장 ><br>
-> > `from dotenv import load_dotenv` > `load_dotenv()` > `discord_token = os.getenv('TOKEN')` # 환경 변수에 저장된 토큰 값 불러오기!
-> 4) GCP를 이용한 Ubuntu 서버에 디스코드 봇 배포!
+> > `from dotenv import load_dotenv` > `load_dotenv()` > `discord_token = os.getenv('TOKEN')` (환경 변수에 저장된 토큰 값 불러오기!)
+> 4) GCP를 이용한 Ubuntu 서버에 디스코드 봇 배포! <br>
+> (`.env` 파일을 서버에 저장해도 되지만, 외부에 공개하지 않기 위해서 토큰 정보를 서버에 그대로 저장해줬습니다.)
 > `nano ~/.bashrc` > `export DISCORD_TOKEN='토큰 or API KEY'` > 파일 저장: `Ctrl + 0` 후에 `Ctrl + x` (나가기) > 환경 변수 저장: `source ~/.bashrc` > 저장 확인: `echo $DISCORD_TOKEN`
-> 5) 
-<img src="image/bashrc파일편집.png" width="400" height="600"/> <br> <br>
+> <img src="image/bashrc파일편집.png" width="400" height="600"/> <br> <br>
+> 5) 로컬 디렉터리엔 저장되어 있지만, 서버엔 저장되어 있지 않은 파일들은 깃을 통해 저장해주던지 구글 드라이브를 통해 저장해주던지 해야 정상 작동합니다.
+> <br> ex) `malgunbd.ttf` <br> <br>
+> 6) SSH 창을 끄더라도 서버가 켜져 있어야 하므로, `tmux`로 이동해 `python3 main.py`를 쳐서 어플리케이션을 켜주면 끝!
+
 
 <br>
 
