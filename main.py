@@ -72,26 +72,28 @@ async def on_message(msg):
         return None
 
     if msg.content == ('!명령어'):
-        await msg.delete()
-        await msg.channel.send(embed=commandInfo())
+        async with aiohttp.ClientSession():
+            await msg.delete()
+            await msg.channel.send(embed=commandInfo())
 
     if msg.content == ('!메타정보'):
-        temp_message = await msg.channel.send("자료 불러오는 중 ...")  # 임시 메시지 저장
-        embed = await get_latest_meta()
-        await temp_message.delete()  # 임시 메시지 삭제
-        if embed:
-            t1 = t.time()
-            await msg.channel.send(embed=embed)
-            await msg.delete()
-            t2 = t.time()
-            embed = discord.Embed(title="데이터 출처", description="[Youtube] 프로관전러 P.S", color=0x62c1cc)
-            embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
-            embed.set_footer(text="프로관전러 P.S 유튜브 자료를 가져왔습니다.",
-                             icon_url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
-            await msg.channel.send(embed=embed)
-        else:
-            await msg.delete()
-            await msg.channel.send("죄송합니다. 아직 현재 메타 정보가 준비되지 않았습니다.")
+        async with aiohttp.ClientSession() as session:
+            temp_message = await msg.channel.send("자료 불러오는 중 ...")  # 임시 메시지 저장
+            embed = await get_latest_meta()
+            await temp_message.delete()  # 임시 메시지 삭제
+            if embed:
+                t1 = t.time()
+                await msg.channel.send(embed=embed)
+                await msg.delete()
+                t2 = t.time()
+                embed = discord.Embed(title="데이터 출처", description="[Youtube] 프로관전러 P.S", color=0x62c1cc)
+                embed.add_field(name="소요시간", value="`" + str(round(t2 - t1, 3)) + "초`", inline=False)
+                embed.set_footer(text="프로관전러 P.S 유튜브 자료를 가져왔습니다.",
+                                 icon_url="https://i.ibb.co/4f1nw7T/P-S.webp?type=w800")
+                await msg.channel.send(embed=embed)
+            else:
+                await msg.delete()
+                await msg.channel.send("죄송합니다. 아직 현재 메타 정보가 준비되지 않았습니다.")
 
     if msg.content.startswith('!전적검색 '):
         parts = msg.content.split('#', 1)
