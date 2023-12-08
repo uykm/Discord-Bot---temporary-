@@ -97,13 +97,13 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 <img src="./image/서버입장시.png" width="450" height="500"/>
 
-<br> <br>
+<br>
 
 * 사람이 채널에 입장했을 때
 
 <img src="./image/멤버입장시.png" width="450" height="90"/>
 
-<br> <br>
+<br>
 
 * !도움 `!도움`
 > `P.S Bot`을 사용하기 위한 명령어들을 설명해줍니다.
@@ -256,6 +256,7 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > <br>
 > ➜ 코드를 어떤 구조로 설계하느냐에 따라 **API를 효율적으로 요청**할 수 있다는 부분을 기억해두면 좋을 것 같습니다.
 
+<br>
 
 ### ● 비동기 방식으로 인한 오버헤드 문제 <br>
 > 만능인 줄만 알았던 비동기 방식도 API에 Json 형식의 파일을 요청할 때마다 <U>매번 세션(session)을 생성</U>해줘야 한다는 점 때문에
@@ -269,6 +270,7 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > ➜ 재작년에 선배님들이 올려주신 오픈 소스에 있는 디자인 템플릿을 가져와 사용하게 됐는데, **"Don't reinvent the wheel."**이라는 말이 있듯이
 > 잘 만들어진 템플릿이 있다면 굳이 직접 만들지 않고 활용하는 것이 <U>오픈 소스의 장점</U>이라고 생각합니다.
 
+<br>
 
 ### ● 비동기 함수 인덱싱
 > 에러 발생: 'coroutine' object is not subscriptable <br>
@@ -277,6 +279,7 @@ Riot api key는 개발용으로 발급 받을 수 있었는데, <U>이 api key�
 > 해결 후: `color = await get_color(temp[3]) /
 > im = Image.new("RGB", (400, 580), color[0])`
 
+<br>
 
 ### ● 팀 빌딩 로직 구현 문제 <br>
 > 처음엔 라인 별로 희망하는 사람을 입력받아 teambuild 함수에 파라미터 값으로 넘겨주는 방식으로 했었는데,
