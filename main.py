@@ -4,6 +4,8 @@ import asyncio
 import sys
 import time as t
 
+from dotenv import load_dotenv
+
 from teamBuild import checkID, teambuild
 from commandInfo import commandInfo
 from ingameAnalysis import get_summoner_id, get_puuid, get_current_game_info, get_strategy
@@ -13,9 +15,11 @@ from searchSummoner import search
 # Ubuntu 서버에 저장된 환경변수 값 가져오기
 import os
 
+# .env 파일에서 환경변수를 로드할 경우 주석 제거
+# load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-# TOKEN = open("DISCORD_TOKEN.txt", "r").readline()
-print(TOKEN)
+
+# print(TOKEN)
 
 
 

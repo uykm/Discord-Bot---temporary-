@@ -1,9 +1,11 @@
 import discord
+from dotenv import load_dotenv
 from googleapiclient.discovery import build
 import os
 
+# .env 파일에서 환경변수를 로드할 경우 주석 제거
+load_dotenv()
 youtube_api_key = os.getenv('YOUTUBE_API_KEY')
-# youtube_api_key = open("YOTUBE_API_KEY.txt", "r").readline()
 
 async def get_latest_meta():
     youtube = build('youtube', 'v3', developerKey=youtube_api_key)

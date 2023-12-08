@@ -2,8 +2,12 @@ import discord
 import itertools
 import os
 
+from dotenv import load_dotenv
+
+# .env 파일에서 환경변수를 로드할 경우 주석 제거
+# load_dotenv()
+
 riot_api_key = os.getenv('RIOT_API_KEY')
-# riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
 
 async def fetch_json(url, session, headers=None):
     async with session.get(url, headers=headers) as response:

@@ -9,8 +9,9 @@ from championDB import find_kor_name
 import os
 from dotenv import load_dotenv
 
+# .env 파일에서 환경변수를 로드할 경우 주석 제거
+# load_dotenv()
 riot_api_key = os.getenv('RIOT_API_KEY')
-# riot_api_key = open("RIOT_API_KEY.txt", "r").readline()
 
 champion_data_cache = None
 
