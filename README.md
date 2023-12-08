@@ -57,6 +57,8 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 ### ● 필요하다고 생각하는 기능
 
+<br>
+
 * `명령어 설명문` ➟ 봇을 사용하기 위해선, P.S 봇이 서버에 입장하거나 새로운 멤버가 서버이 입장했을 때, 그리고 `!도움`를 입력했을 때 명령어 정보를 알려주는 기능이 필요합니다.
 
 
@@ -129,7 +131,7 @@ League of Legend `P.S Bot` <img src="https://i.ibb.co/4f1nw7T/P-S.webp" width="3
 
 <img src="./image/!전적검색 에러.png" width="350" height="300"/> 
 
-<br> <br>
+<br>
 
 * **!인게임분석 닉네임#태그** `!인게임분석 민규#TAG`
 > 해당 게임에서 누구와 게임을 풀어나가야 할지, 적팀에서 누구를 조심해야 할지를 승률에 기반해서 알려줍니다.
